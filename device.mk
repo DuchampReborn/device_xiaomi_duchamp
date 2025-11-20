@@ -375,6 +375,7 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 
 # Wifi
 $(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
+$(call soong_config_set_bool,wpa_supplicant_8,wifi_disable_multi_akm,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
