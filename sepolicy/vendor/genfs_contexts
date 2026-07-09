@@ -9,6 +9,9 @@ genfscon sysfs /devices/platform/11f01000.i2c/i2c-5/5-0034/11f01000.i2c:mt6375@3
 genfscon sysfs /devices/platform/11f01000.i2c/i2c-5/5-0034/11f01000.i2c:mt6375@34:mtk-gauge/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/pd-adapter/Charging_Adapter                                             u:object_r:sysfs_batteryinfo:s0
 
+# Core Control
+genfscon sysfs /devices/system/cpu/cpu[0-7]/online                                                       u:object_r:vendor_sysfs_corecontrol:s0
+
 # Display
 genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0                                       u:object_r:vendor_sysfs_displayfeature:s0
 

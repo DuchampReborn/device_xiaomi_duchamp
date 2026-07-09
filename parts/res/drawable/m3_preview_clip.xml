@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Material 3 Expressive component - part of the XiaomiParts M3 redesign.
+    SPDX-License-Identifier: Apache-2.0
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Rounded clip surface for the ViewPager (also provides the outline
+         used by android:clipToOutline). Radius matches the preview card. -->
+    <corners android:radius="@dimen/m3_corner_card" />
+    <solid android:color="@color/m3_surface_container_low" />
+</shape>
