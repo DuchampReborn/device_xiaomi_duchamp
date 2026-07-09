@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.XiaomiParts.Display" parent="@android:style/TextAppearance.Material.Display1">
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.XiaomiParts.Title" parent="@android:style/TextAppearance.Material.Subhead">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.XiaomiParts.Body" parent="@android:style/TextAppearance.Material.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.XiaomiParts.BodySecondary" parent="@android:style/TextAppearance.Material.Body1">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.XiaomiParts.Label" parent="@android:style/TextAppearance.Material.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="PreferenceTheme.XiaomiParts.M3" parent="@style/PreferenceThemeOverlay.v14.Material">
+        <item name="preferenceStyle">@style/Preference.XiaomiParts.M3</item>
+        <item name="preferenceCategoryStyle">@style/Preference.Category.XiaomiParts.M3</item>
+        <item name="checkBoxPreferenceStyle">@style/Preference.CheckBoxPreference.XiaomiParts.M3</item>
+        <item name="switchPreferenceStyle">@style/Preference.SwitchPreference.XiaomiParts.M3</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat.XiaomiParts.M3</item>
+        <item name="dialogPreferenceStyle">@style/Preference.DialogPreference.XiaomiParts.M3</item>
+        <item name="editTextPreferenceStyle">@style/Preference.EditTextPreference.XiaomiParts.M3</item>
+        <item name="dropdownPreferenceStyle">@style/Preference.DropDown.XiaomiParts.M3</item>
+    </style>
+
+    <style name="Preference.XiaomiParts.M3" parent="@style/Preference.Material">
+        <item name="layout">@layout/xp_preference_material</item>
+    </style>
+
+    <style name="Preference.Category.XiaomiParts.M3" parent="@style/Preference.Category.Material">
+        <item name="layout">@layout/xp_preference_category</item>
+    </style>
+
+    <style name="Preference.CheckBoxPreference.XiaomiParts.M3" parent="@style/Preference.CheckBoxPreference.Material">
+        <item name="layout">@layout/xp_preference_material</item>
+    </style>
+
+    <style name="Preference.SwitchPreference.XiaomiParts.M3" parent="@style/Preference.SwitchPreference.Material">
+        <item name="layout">@layout/xp_preference_material</item>
+    </style>
+
+    <style name="Preference.SwitchPreferenceCompat.XiaomiParts.M3" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="layout">@layout/xp_preference_material</item>
+    </style>
+
+    <style name="Preference.DialogPreference.XiaomiParts.M3" parent="@style/Preference.DialogPreference.Material">
+        <item name="layout">@layout/xp_preference_material</item>
+    </style>
+
+    <style name="Preference.EditTextPreference.XiaomiParts.M3" parent="@style/Preference.DialogPreference.Material">
+        <item name="layout">@layout/xp_preference_material</item>
+    </style>
+
+    <style name="Preference.DropDown.XiaomiParts.M3" parent="@style/Preference.DropDown.Material">
+        <item name="layout">@layout/xp_preference_material</item>
+    </style>
+
+    <style name="Widget.XiaomiParts.SwitchCompat.M3" parent="@style/Widget.XiaomiParts.Switch.M3">
+        <item name="android:thumb">@drawable/m3_switch_thumb</item>
+        <item name="android:track">@drawable/m3_switch_track</item>
+    </style>
+
+    <style name="Widget.XiaomiParts.Switch.M3" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:thumb">@drawable/m3_switch_thumb</item>
+        <item name="android:track">@drawable/m3_switch_track</item>
+        <item name="android:switchMinWidth">@dimen/m3_switch_track_width</item>
+        <item name="android:switchPadding">0dp</item>
+    </style>
+
+    <style name="Widget.XiaomiParts.SeekBar.M3" parent="@android:style/Widget.Material.SeekBar">
+        <item name="android:progressDrawable">@drawable/m3_slider_progress</item>
+        <item name="android:thumb">@drawable/m3_slider_thumb</item>
+        <item name="android:tickMark">@null</item>
+    </style>
+
+</resources>

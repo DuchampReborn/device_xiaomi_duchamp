@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <dimen name="m3_space_xs">4dp</dimen>
+    <dimen name="m3_space_s">8dp</dimen>
+    <dimen name="m3_space_m">12dp</dimen>
+    <dimen name="m3_space_l">16dp</dimen>
+    <dimen name="m3_space_xl">24dp</dimen>
+    <dimen name="m3_space_xxl">32dp</dimen>
+
+    <dimen name="m3_corner_card">24dp</dimen>
+    <dimen name="m3_corner_hero">28dp</dimen>
+    <dimen name="m3_corner_chip">999dp</dimen>
+    <dimen name="m3_corner_icon_chip">32dp</dimen>
+
+    <dimen name="m3_switch_track_width">52dp</dimen>
+    <dimen name="m3_switch_track_height">32dp</dimen>
+    <dimen name="m3_switch_thumb_size">24dp</dimen>
+    <dimen name="m3_icon_chip_size">64dp</dimen>
+    <dimen name="m3_mode_card_height">76dp</dimen>
+
+    <dimen name="m3_pref_padding_h">16dp</dimen>
+    <dimen name="m3_pref_min_height">64dp</dimen>
+    <dimen name="m3_pref_icon_chip">40dp</dimen>
+    <dimen name="m3_pref_icon_size">24dp</dimen>
+    <dimen name="m3_pref_category_padding_top">28dp</dimen>
+    <dimen name="m3_pref_category_padding_bottom">8dp</dimen>
+
+    <dimen name="m3_icon_button_size">40dp</dimen>
+    <dimen name="m3_icon_button_glyph">20dp</dimen>
+
+    <dimen name="m3_slider_track_height">12dp</dimen>
+    <dimen name="m3_slider_track_radius">6dp</dimen>
+    <dimen name="m3_slider_thumb_width">6dp</dimen>
+    <dimen name="m3_slider_thumb_height">36dp</dimen>
+    <dimen name="m3_slider_thumb_radius">3dp</dimen>
+
+</resources>

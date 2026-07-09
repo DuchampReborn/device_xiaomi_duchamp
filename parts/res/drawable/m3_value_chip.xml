@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Material 3 Expressive component - part of the XiaomiParts M3 redesign.
+    SPDX-License-Identifier: Apache-2.0
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Pill chip behind the custom seekbar value label -->
+    <corners android:radius="999dp" />
+    <solid android:color="@color/m3_surface_container_high" />
+</shape>

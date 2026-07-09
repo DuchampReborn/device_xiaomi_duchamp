@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    TurboCharging - Material 3 Expressive.
+    Key/class contract preserved: turbo_top_intro (display only), turbo_enable,
+    turbo_current, pd_verified_enable (TurboChargingFragment binds these).
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/turbo_charge_title">
+
+    <Preference
+        android:key="turbo_top_intro"
+        android:layout="@layout/xp_preference_top_intro"
+        android:title="@string/turbo_charge_summary"
+        android:selectable="false" />
+
+    <SwitchPreferenceCompat
+        android:key="turbo_enable"
+        android:title="@string/turbo_enable_title"
+        android:icon="@drawable/ic_m3_bolt"
+        android:defaultValue="true" />
+
+    <ListPreference
+        android:key="turbo_current"
+        android:title="@string/turbo_charge_current_pref_title"
+        android:icon="@drawable/ic_m3_speed"
+        android:entries="@array/turbo_modes_entries"
+        android:entryValues="@array/turbo_modes_values"
+        android:defaultValue="@integer/turbo_modes_default"
+        android:summary="%s" />
+
+    <SwitchPreferenceCompat
+        android:key="pd_verified_enable"
+        android:title="@string/pd_verified_title"
+        android:summary="@string/pd_verified_summary"
+        android:icon="@drawable/ic_m3_verified"
+        android:defaultValue="false" />
+
+</PreferenceScreen>
