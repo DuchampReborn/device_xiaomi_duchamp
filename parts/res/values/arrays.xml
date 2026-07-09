@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Thermal Profile -->
+    <string-array name="thermal_profile_entries">
+        <item>@string/thermalprofile_battery</item>
+        <item>@string/thermalprofile_default</item>
+        <item>@string/thermalprofile_game</item>
+        <item>@string/thermalprofile_performance</item>
+    </string-array>
+    <string-array name="thermal_profile_values">
+        <item>700</item>
+        <item>50</item>
+        <item>19</item>
+        <item>18</item>
+    </string-array>
+   <!-- Charge Limit -->
+    <string-array name="turbo_modes_entries">
+        <item>@string/turbo_mode_one</item>
+        <item>@string/turbo_mode_two</item>
+        <item>@string/turbo_mode_three</item>
+    </string-array>
+
+    <string-array name="turbo_modes_values">
+        <item>4800000</item>
+        <item>7000000</item>
+        <item>22000000</item>
+    </string-array>
+</resources>

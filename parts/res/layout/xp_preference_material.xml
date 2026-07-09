@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/m3_pref_min_height"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/m3_pref_padding_h"
+    android:paddingEnd="@dimen/m3_pref_padding_h"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clipToPadding="false">
+
+    <!-- Tonal icon container: 40dp circle, secondary container fill -->
+    <FrameLayout
+        android:id="@android:id/icon_frame"
+        android:layout_width="@dimen/m3_pref_icon_chip"
+        android:layout_height="@dimen/m3_pref_icon_chip"
+        android:layout_marginEnd="@dimen/m3_space_l"
+        android:background="@drawable/m3_icon_chip_bg">
+
+        <ImageView
+            android:id="@android:id/icon"
+            android:layout_width="@dimen/m3_pref_icon_size"
+            android:layout_height="@dimen/m3_pref_icon_size"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:tint="@color/m3_on_secondary_container" />
+    </FrameLayout>
+
+    <!-- Text column -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/m3_space_s">
+
+        <TextView
+            android:id="@android:id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:textColor="?android:attr/textColorPrimary"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@android:id/summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            android:textColor="?android:attr/textColorSecondary"
+            android:maxLines="10"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- Trailing widget slot: pill switch / dropdown spinner -->
+    <LinearLayout
+        android:id="@android:id/widget_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="end|center_vertical"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/m3_space_m" />
+
+</LinearLayout>

@@ -6,6 +6,9 @@
 # Batterysecret
 /(vendor|system/vendor)/bin/batterysecret                                                              u:object_r:vendor_batterysecret_exec:s0
 
+# Core Control
+/sys/devices/system/cpu/cpu[0-7]/online					                                               u:object_r:vendor_sysfs_corecontrol:s0
+
 # Display
 /(vendor|system/vendor)/bin/displayfeature                                                             u:object_r:vendor_displayfeature_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.displayfeature_aidl-service                   u:object_r:vendor_hal_displayfeature_default_exec:s0
@@ -40,3 +43,10 @@
 
 # Thermal
 /(vendor|system/vendor)/bin/mi_thermald                                                                u:object_r:vendor_mi_thermald_exec:s0
+
+# Charge Limit
+/sys/class/power_supply/battery/constant_charge_current                                                u:object_r:sysfs_batteryinfo:s0
+/sys/class/power_supply/usb/online                                                                     u:object_r:sysfs_batteryinfo:s0
+
+# PD adapter sysfs files
+/sys/devices/platform/pd-adapter/Charging_Adapter/pd_adapter/usbpd_verifed                             u:object_r:sysfs_batteryinfo:s0

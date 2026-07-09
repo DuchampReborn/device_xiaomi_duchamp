@@ -1,6 +1,9 @@
 # Audio
 type audio_socket, file_type;
 
+# Core Control
+type vendor_sysfs_corecontrol, fs_type, sysfs_type;
+
 # Display
 type vendor_displayfeature_device, dev_type;
 type vendor_display_data_file, data_file_type, file_type;

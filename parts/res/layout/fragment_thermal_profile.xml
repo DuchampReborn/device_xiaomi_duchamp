@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/m3_space_l"
+        android:paddingEnd="@dimen/m3_space_l"
+        android:paddingTop="@dimen/m3_space_l"
+        android:paddingBottom="@dimen/m3_space_xxl">
+
+        <!--  Hero card -->
+        <FrameLayout
+            android:id="@+id/card_current_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:minHeight="148dp"
+                android:padding="@dimen/m3_space_xl">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_current_mode_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.Label"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:text="@string/thermalprofile_current_mode" />
+
+                    <TextView
+                        android:id="@+id/tv_current_profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.Display"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/thermalprofile_default" />
+
+                </LinearLayout>
+
+                <!-- Icon chip -->
+                <FrameLayout
+                    android:id="@+id/icon_chip"
+                    android:layout_width="@dimen/m3_icon_chip_size"
+                    android:layout_height="@dimen/m3_icon_chip_size"
+                    android:layout_marginStart="@dimen/m3_space_l">
+
+                    <ImageView
+                        android:id="@+id/iv_current_mode_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_thermal_default"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/thermalprofile_title" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- Mode selector -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/m3_space_xl">
+
+            <!-- Balanced -->
+            <FrameLayout
+                android:id="@+id/card_default"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/m3_mode_card_height"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/m3_space_l"
+                    android:paddingEnd="@dimen/m3_space_m">
+
+                    <ImageView
+                        android:id="@+id/icon_default"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_thermal_default"
+                        android:contentDescription="@string/thermalprofile_default" />
+
+                    <TextView
+                        android:id="@+id/label_default"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/m3_space_m"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.Body"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/thermalprofile_default" />
+
+                    <ImageView
+                        android:id="@+id/check_default"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_m3_check"
+                        android:visibility="gone"
+                        android:importantForAccessibility="no" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="@dimen/m3_space_m"
+                android:layout_height="1dp" />
+
+            <!-- Performance -->
+            <FrameLayout
+                android:id="@+id/card_performance"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/m3_mode_card_height"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/m3_space_l"
+                    android:paddingEnd="@dimen/m3_space_m">
+
+                    <ImageView
+                        android:id="@+id/icon_performance"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_thermal_performance"
+                        android:contentDescription="@string/thermalprofile_performance" />
+
+                    <TextView
+                        android:id="@+id/label_performance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/m3_space_m"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.Body"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/thermalprofile_performance" />
+
+                    <ImageView
+                        android:id="@+id/check_performance"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_m3_check"
+                        android:visibility="gone"
+                        android:importantForAccessibility="no" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/m3_space_m">
+
+            <!-- Battery Saver -->
+            <FrameLayout
+                android:id="@+id/card_battery"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/m3_mode_card_height"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/m3_space_l"
+                    android:paddingEnd="@dimen/m3_space_m">
+
+                    <ImageView
+                        android:id="@+id/icon_battery"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_thermal_battery"
+                        android:contentDescription="@string/thermalprofile_battery" />
+
+                    <TextView
+                        android:id="@+id/label_battery"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/m3_space_m"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.Body"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/thermalprofile_battery" />
+
+                    <ImageView
+                        android:id="@+id/check_battery"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_m3_check"
+                        android:visibility="gone"
+                        android:importantForAccessibility="no" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="@dimen/m3_space_m"
+                android:layout_height="1dp" />
+
+            <FrameLayout
+                android:id="@+id/card_game"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/m3_mode_card_height"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/m3_space_l"
+                    android:paddingEnd="@dimen/m3_space_m">
+
+                    <ImageView
+                        android:id="@+id/icon_game"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_thermal_gaming"
+                        android:contentDescription="@string/thermalprofile_game" />
+
+                    <TextView
+                        android:id="@+id/label_game"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/m3_space_m"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.Body"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/thermalprofile_game" />
+
+                    <ImageView
+                        android:id="@+id/check_game"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_m3_check"
+                        android:visibility="gone"
+                        android:importantForAccessibility="no" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m3_space_xl"
+            android:background="@drawable/m3_card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/m3_space_xl">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.Title"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:text="@string/thermalprofile_auto_mode_title" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.BodySecondary"
+                        android:text="@string/thermalprofile_auto_mode_summary" />
+
+                </LinearLayout>
+
+                   <Switch
+                       android:id="@+id/switch_auto_mode"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="@dimen/m3_space_l" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top"
+            android:layout_marginTop="@dimen/m3_space_m"
+            android:padding="@dimen/m3_space_xl"
+            android:background="@drawable/m3_card_background">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_m3_info"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/m3_space_m"
+                android:textAppearance="@style/TextAppearance.XiaomiParts.BodySecondary"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/thermalprofile_auto_mode_note" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

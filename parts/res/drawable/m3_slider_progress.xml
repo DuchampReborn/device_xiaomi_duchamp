@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Material 3 Expressive component - part of the XiaomiParts M3 redesign.
+    SPDX-License-Identifier: Apache-2.0
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Inactive track: surface variant pill -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/m3_slider_track_radius" />
+            <size android:height="@dimen/m3_slider_track_height" />
+            <solid android:color="@color/m3_surface_variant" />
+        </shape>
+    </item>
+
+    <!-- Active track: primary pill -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/m3_slider_track_radius" />
+                <size android:height="@dimen/m3_slider_track_height" />
+                <solid android:color="@color/m3_primary" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>
