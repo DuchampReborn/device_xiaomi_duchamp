@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/m3_pref_padding_h"
+    android:paddingEnd="@dimen/m3_pref_padding_h"
+    android:paddingTop="@dimen/m3_pref_category_padding_top"
+    android:paddingBottom="@dimen/m3_pref_category_padding_bottom"
+    android:textSize="14sp"
+    android:fontFamily="sans-serif-medium"
+    android:letterSpacing="0.02"
+    android:textColor="@color/m3_primary"
+    android:maxLines="2"
+    android:ellipsize="end" />

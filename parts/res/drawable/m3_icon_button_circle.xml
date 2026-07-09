@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Material 3 Expressive component - part of the XiaomiParts M3 redesign.
+    SPDX-License-Identifier: Apache-2.0
+-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/m3_primary">
+
+    <!-- Standard tonal icon button (40dp circle) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/m3_secondary_container" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/mask">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+
+</ripple>
