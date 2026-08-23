@@ -81,6 +81,9 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
 
+    ('vendor/lib64/libcodec2_mtk_vdec.so', 'vendor/lib64/libcodec2_mtk_venc.so'): blob_fixup()
+        .replace_needed('libformatter.so', 'libformatter-v34.so'),
+
     'vendor/lib64/mt6897/libmtkcam_hwnode.jpegnode.so': blob_fixup()
         .replace_needed('libultrahdr.so', 'libultrahdr-v34.so'),
 
