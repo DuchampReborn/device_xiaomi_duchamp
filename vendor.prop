@@ -26,6 +26,7 @@ vendor.audiohal.telephonytx.type=2
 
 # Bluetooth
 ro.bluetooth.a2dp_offload.supported=true
+bluetooth.a2dp.source.lhdcv5_priority.config=-1
 
 # Camera
 persist.vendor.camera3.pipeline.bufnum.base.imgo=6
