@@ -76,6 +76,7 @@ debug.sf.hwc.min.duration=2000000
 debug.sf.late.app.duration=11600000
 debug.sf.late.sf.duration=12300000
 debug.sf.predict_hwc_composition_strategy=0
+debug.sf.disable_client_composition_cache=0
 debug.sf.set_idle_timer_ms=1100
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
