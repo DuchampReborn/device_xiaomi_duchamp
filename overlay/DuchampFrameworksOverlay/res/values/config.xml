@@ -588,7 +588,7 @@
      <!-- Control whether the pickup gesture is enabled by default. This value will be used
      during initialization when the setting is still null. -->
     <bool name="config_dozePickupGestureEnabled">false</bool>
-    
+
     <!-- Type of the double tap sensor. Empty if double tap is not supported. -->
     <string name="config_dozeDoubleTapSensorType" translatable="false">org.lineageos.sensor.double_tap</string>
 
@@ -745,4 +745,13 @@
     <!-- Default value for fp screen off unlock toggle, it only works for the devices that support
          fp screen off unlock-->
     <bool name="config_screen_off_udfps_default_on">true</bool>
+
+    <!-- Whether device has turbo power charging support -->
+    <bool name="config_hasTurboPowerCharger">true</bool>
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
+
+    <!-- Expected value from fast charging status file -->
+    <string name="config_oemFastChargerStatusValue" translatable="false">1</string>
 </resources>
