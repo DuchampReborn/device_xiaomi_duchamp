@@ -90,6 +90,9 @@ on boot
     # Set thermal mode to mgame
     write /sys/devices/virtual/thermal/thermal_message/sconfig 50
 
+    chmod 0444 /sys/kernel/ged/hal/current_freqency
+    chmod 0444 /sys/kernel/ged/hal/gpu_utilization
+
 # charger
 on boot && property:ro.product.device=duchamp && property:ro.boot.hwc=GL
     setprop persist.vendor.accelerate.charge false
