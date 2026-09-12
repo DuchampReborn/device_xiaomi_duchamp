@@ -43,6 +43,9 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+# GameBar
+$(call inherit-product-if-exists, packages/apps/GameBar/gamebar.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service.mediatek \
@@ -343,7 +346,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
 
 # Thermal files
 PRODUCT_COPY_FILES += \
