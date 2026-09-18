@@ -14,10 +14,10 @@
     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Fast brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_fast">4932</integer>
+    <integer name="config_brightness_ramp_rate_fast">180</integer>
 
     <!-- Slow brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_slow">3946</integer>
+    <integer name="config_brightness_ramp_rate_slow">60</integer>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
@@ -69,12 +69,20 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1500</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">3000</integer>
+
+    <!-- Light sensor event rate in milliseconds for automatic brightness control. -->
+    <integer name="config_autoBrightnessLightSensorRate">250</integer>
 
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
-    <fraction name="config_autoBrightnessAdjustmentMaxGamma">100.0%</fraction>
+    <fraction name="config_autoBrightnessAdjustmentMaxGamma">300%</fraction>
+
+    <!-- Whether or not to skip the initial brightness ramps when the display transitions to
+         STATE_ON. Setting this to true will skip the brightness ramp to the last stored active
+         brightness value and will repeat for the following ramp if autobrightness is enabled. -->
+    <bool name="config_skipScreenOnBrightnessRamp">true</bool>
 
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
@@ -230,122 +238,6 @@
         <item>90000</item>
         <item>95000</item>
         <item>100000</item>
-    </integer-array>
-
-    <!-- Array of output values for LCD backlight corresponding to the lux values
-         in the config_autoBrightnessLevels array.  This array should have size one greater
-         than the size of the config_autoBrightnessLevels array.
-         The brightness values must be between 0 and 255 and be non-decreasing.
-         This must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>36</item>
-        <item>54</item>
-        <item>65</item>
-        <item>163</item>
-        <item>199</item>
-        <item>243</item>
-        <item>278</item>
-        <item>376</item>
-        <item>483</item>
-        <item>622</item>
-        <item>663</item>
-        <item>671</item>
-        <item>671</item>
-        <item>671</item>
-        <item>679</item>
-        <item>679</item>
-        <item>679</item>
-        <item>687</item>
-        <item>687</item>
-        <item>696</item>
-        <item>696</item>
-        <item>696</item>
-        <item>696</item>
-        <item>704</item>
-        <item>704</item>
-        <item>712</item>
-        <item>728</item>
-        <item>737</item>
-        <item>745</item>
-        <item>761</item>
-        <item>769</item>
-        <item>786</item>
-        <item>794</item>
-        <item>810</item>
-        <item>819</item>
-        <item>827</item>
-        <item>851</item>
-        <item>859</item>
-        <item>868</item>
-        <item>884</item>
-        <item>892</item>
-        <item>909</item>
-        <item>917</item>
-        <item>933</item>
-        <item>950</item>
-        <item>1122</item>
-        <item>1285</item>
-        <item>1474</item>
-        <item>1678</item>
-        <item>1850</item>
-        <item>2104</item>
-        <item>2293</item>
-        <item>2416</item>
-        <item>3022</item>
-        <item>3276</item>
-        <item>3412</item>
-        <item>3549</item>
-        <item>3685</item>
-        <item>3822</item>
-        <item>3958</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
-        <item>4095</item>
     </integer-array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
