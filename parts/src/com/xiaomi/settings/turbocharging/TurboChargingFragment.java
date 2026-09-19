@@ -27,9 +27,7 @@ import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.widget.MainSwitchPreference;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -39,15 +37,11 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
 
     private static final String TAG = "TurboChargingFragment";
     private static final String CHARGE_CURRENT_FILE = "/sys/class/power_supply/battery/constant_charge_current";
-    private static final String USB_ONLINE_FILE = "/sys/class/power_supply/usb/online";
-    private static final String PD_VERIFIED_FILE = "/sys/devices/platform/pd-adapter/Charging_Adapter/pd_adapter/usbpd_verifed";
     private static final String PREF_TURBO_ENABLED = "turbo_enable";
     private static final String PREF_TURBO_CURRENT = "turbo_current";
-    private static final String PREF_PD_VERIFIED = "pd_verified_enable";
 
     private SwitchPreferenceCompat mTurboEnabled;
     private ListPreference mTurboCurrent;
-    private SwitchPreferenceCompat mPdVerifiedEnabled;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -59,54 +53,6 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
         mTurboCurrent = (ListPreference) findPreference(PREF_TURBO_CURRENT);
         mTurboCurrent.setOnPreferenceChangeListener(this);
         mTurboCurrent.setEnabled(mTurboEnabled.isChecked());
-
-        mPdVerifiedEnabled = (SwitchPreferenceCompat) findPreference(PREF_PD_VERIFIED);
-        mPdVerifiedEnabled.setOnPreferenceChangeListener(this);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        syncPdVerifiedToggle();
-    }
-
-    /**
-     * Reads the actual value from the PD verified sysfs node and updates the toggle
-     * to reflect it. This handles the case where the charger disconnects and the
-     * kernel resets the node to 0 without the UI knowing.
-     */
-    private void syncPdVerifiedToggle() {
-        boolean nodeValue = readPdVerifiedNode();
-        Log.i(TAG, "syncPdVerifiedToggle: node=" + nodeValue);
-
-        // If the node was reset (e.g. charger disconnect), also update the stored pref
-        // so the service doesn't immediately re-write stale data on next connect.
-        boolean prefValue = PreferenceManager.getDefaultSharedPreferences(getActivity())
-                .getBoolean(PREF_PD_VERIFIED, false);
-
-        if (nodeValue != prefValue) {
-            PreferenceManager.getDefaultSharedPreferences(getActivity())
-                    .edit()
-                    .putBoolean(PREF_PD_VERIFIED, nodeValue)
-                    .apply();
-        }
-
-        // Update toggle UI without triggering onPreferenceChange
-        mPdVerifiedEnabled.setOnPreferenceChangeListener(null);
-        mPdVerifiedEnabled.setChecked(nodeValue);
-        mPdVerifiedEnabled.setOnPreferenceChangeListener(this);
-    }
-
-    private boolean readPdVerifiedNode() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(PD_VERIFIED_FILE))) {
-            String line = reader.readLine();
-            if (line != null) {
-                return line.trim().equals("1");
-            }
-        } catch (IOException e) {
-            Log.e(TAG, "Failed to read PD Verified node", e);
-        }
-        return false;
     }
 
     @Override
@@ -115,7 +61,6 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
         boolean enabled = (boolean) newValue;
         mTurboCurrent.setEnabled(enabled);
 
-        // Always update the charge current when the toggle changes
         updateChargeCurrent();
 
         return true;
@@ -126,13 +71,8 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
                 .putString(PREF_TURBO_CURRENT, value)
                 .apply();
 
-        // Update the charge current when the option is changed
         updateChargeCurrent();
 
-            return true;
-        } else if (preference == mPdVerifiedEnabled) {
-            boolean enabled = (boolean) newValue;
-            updatePdVerified(enabled);
             return true;
         }
             return false;
@@ -163,16 +103,6 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
             Log.e(TAG, "Invalid charge current value: " + value, e);
         } catch (IOException e) {
             Log.e(TAG, "Failed to update charge current", e);
-        }
-    }
-
-    private void updatePdVerified(boolean enabled) {
-        String value = enabled ? "1" : "0";
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(PD_VERIFIED_FILE))) {
-            writer.write(value);
-            Log.i(TAG, "Updated PD Verified to " + value);
-        } catch (IOException e) {
-            Log.e(TAG, "Failed to update PD Verified", e);
         }
     }
 }

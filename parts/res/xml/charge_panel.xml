@@ -30,11 +30,4 @@
         android:defaultValue="@integer/turbo_modes_default"
         android:summary="%s" />
 
-    <SwitchPreferenceCompat
-        android:key="pd_verified_enable"
-        android:title="@string/pd_verified_title"
-        android:summary="@string/pd_verified_summary"
-        android:icon="@drawable/ic_m3_verified"
-        android:defaultValue="false" />
-
 </PreferenceScreen>
