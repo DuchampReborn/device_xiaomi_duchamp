@@ -143,6 +143,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
     $(LOCAL_PATH)/configs/linker.config.json
 
+# Engineer Mode
+$(call inherit-product-if-exists, device/xiaomi/duchamp-engineering/device.mk)
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
