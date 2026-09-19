@@ -50,6 +50,7 @@ $(call inherit-product-if-exists, packages/apps/GameBar/gamebar.mk)
 PRODUCT_PACKAGES += \
     android.hardware.audio.service.mediatek \
     android.hardware.audio.effect@7.0-impl \
+    libaudio_metadata_shim
 
 PRODUCT_PACKAGES += \
     audio.primary.default \

@@ -1,0 +1,15 @@
+cc_library_shared {
+    name: "libaudio_metadata_shim",
+    srcs: ["libaudio_metadata_shim.cpp"],
+    shared_libs: [
+        "liblog",
+        "libdl",
+        "android.hardware.audio.common@7.0",
+        "android.hardware.audio.common@7.0-util",
+        "android.hardware.audio.common-V5-ndk",
+    ],
+    header_libs: [
+        "libhardware_headers",
+    ],
+    vendor: true,
+}
