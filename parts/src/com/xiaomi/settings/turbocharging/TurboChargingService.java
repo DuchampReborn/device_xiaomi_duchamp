@@ -32,8 +32,6 @@ import java.io.IOException;
 public class TurboChargingService extends Service {
     private static final String TAG = "TurboCharging";
     private static final String CHARGE_CURRENT_FILE = "/sys/class/power_supply/battery/constant_charge_current";
-    private static final String USB_ONLINE_FILE = "/sys/class/power_supply/usb/online";
-    private static final String PD_VERIFIED_FILE = "/sys/devices/platform/pd-adapter/Charging_Adapter/pd_adapter/usbpd_verifed";
 
     private UEventObserver mObserver;
     private SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener;
@@ -42,41 +40,29 @@ public class TurboChargingService extends Service {
     public void onCreate() {
         Log.d(TAG, "Starting");
 
-        // Set up the UEventObserver to monitor charger status
         mObserver = new UEventObserver() {
             @Override
             public void onUEvent(UEvent event) {
                 String chargerStatus = event.get("POWER_SUPPLY_ONLINE");
-                if (chargerStatus != null) {
-                    if (chargerStatus.equals("1")) {
-                        // Charger connected - apply settings
-                        updateChargeCurrent();
-                        updatePdVerified();
-                    } else if (chargerStatus.equals("0")) {
-                        // Charger disconnected - system resets to 0, we'll reapply on next connect
-                        Log.i(TAG, "Charger disconnected, settings will be reapplied on reconnect");
-                    }
+                if (chargerStatus != null && chargerStatus.equals("1")) {
+                    updateChargeCurrent();
                 }
             }
         };
         mObserver.startObserving("DEVPATH=/sys/class/power_supply/usb");
 
-        // Listen for changes in preferences
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         preferenceChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
             @Override
             public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
                 if (key.equals("turbo_enable") || key.equals("turbo_current")) {
-                    updateChargeCurrent();  // Update the charge current when preferences change
-                } else if (key.equals("pd_verified_enable")) {
-                    updatePdVerified();  // Update PD verified when preference changes
+                    updateChargeCurrent();
                 }
             }
         };
         prefs.registerOnSharedPreferenceChangeListener(preferenceChangeListener);
 
-        updateChargeCurrent();  // Initial update
-        updatePdVerified();  // Initial PD verified update
+        updateChargeCurrent();
     }
 
     private void updateChargeCurrent() {
@@ -106,18 +92,6 @@ public class TurboChargingService extends Service {
         }
     }
 
-    private void updatePdVerified() {
-        boolean pdVerifiedEnabled = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("pd_verified_enable", false);
-        Log.i(TAG, "isPdVerified=" + pdVerifiedEnabled);
-        String value = pdVerifiedEnabled ? "1" : "0";
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(PD_VERIFIED_FILE))) {
-            writer.write(value);
-            Log.i(TAG, "Updated PD Verified to " + value);
-        } catch (IOException e) {
-            Log.e(TAG, "Failed to update PD Verified", e);
-        }
-    }
-
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         return START_STICKY;
@@ -131,7 +105,6 @@ public class TurboChargingService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        // Unregister the preference listener to avoid memory leaks
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         prefs.unregisterOnSharedPreferenceChangeListener(preferenceChangeListener);
     }

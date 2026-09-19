@@ -40,10 +40,6 @@
     <string name="turbo_charge_tile_label">Charge Speed Limit</string>
     <string name="turbo_charge_tile_content_description">Toggle Charge Speed Limit</string>
 
-    <!-- USB PD Verification -->
-    <string name="pd_verified_title">Enable PD Charging</string>
-    <string name="pd_verified_summary">Enable support for Power Delivery Charging</string>
-
     <!-- Core Control -->
     <string name="core_control_title">Core Control</string>
     <string name="core_control_summary">Manually enable or disable individual CPU cores</string>
