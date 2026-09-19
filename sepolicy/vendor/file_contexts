@@ -46,7 +46,3 @@
 
 # Charge Limit
 /sys/class/power_supply/battery/constant_charge_current                                                u:object_r:sysfs_batteryinfo:s0
-/sys/class/power_supply/usb/online                                                                     u:object_r:sysfs_batteryinfo:s0
-
-# PD adapter sysfs files
-/sys/devices/platform/pd-adapter/Charging_Adapter/pd_adapter/usbpd_verifed                             u:object_r:sysfs_batteryinfo:s0
