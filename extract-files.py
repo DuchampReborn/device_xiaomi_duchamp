@@ -128,7 +128,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_keymint_utils_V3.so'),
 
     'vendor/lib64/libkeymint_remote_prov_support_V3.so': blob_fixup()
-        .replace_needed('libbase.so', 'libbase-v34.so'),
+        .replace_needed('libbase.so', 'libbase-v34.so')
+        .add_needed('libcppcose_rkp-V3.so'),
 
     'odm/lib64/libmt_mitee.so': blob_fixup()
         .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_keymint_utils_V3.so')

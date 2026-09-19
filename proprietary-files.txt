@@ -1375,6 +1375,7 @@ vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xm
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.xml
 vendor/lib64/libkeymint.so:vendor/lib64/libkeymint_V3.so;FIX_SONAME
 vendor/lib64/libkeymint_remote_prov_support.so:vendor/lib64/libkeymint_remote_prov_support_V3.so;FIX_SONAME
+vendor/lib64/libcppcose_rkp.so:vendor/lib64/libcppcose_rkp-V3.so;FIX_SONAME
 
 # Media
 system/lib64/libstagefright_bufferqueue_helper.so:vendor/lib64/libstagefright_bufferqueue_helper-v36.so;FIX_SONAME
