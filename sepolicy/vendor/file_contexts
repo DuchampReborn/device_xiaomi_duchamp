@@ -45,4 +45,4 @@
 /(vendor|system/vendor)/bin/mi_thermald                                                                u:object_r:vendor_mi_thermald_exec:s0
 
 # Charge Limit
-/sys/class/power_supply/battery/constant_charge_current                                                u:object_r:sysfs_batteryinfo:s0
+/sys/class/power_supply/battery/constant_charge_current                                                u:object_r:sysfs_pwrinfo:s0
