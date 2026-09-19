@@ -57,4 +57,5 @@ allow system_app vendor_sysfs_corecontrol:file { getattr open read write };
 
 # Charge Limit
 allow system_app sysfs_batteryinfo:dir search;
-allow system_app sysfs_batteryinfo:file rw_file_perms;
+allow system_app sysfs_pwrinfo:dir search;
+allow system_app sysfs_pwrinfo:file rw_file_perms;

@@ -5,6 +5,7 @@ init_daemon_domain(vendor_mi_thermald)
 
 r_dir_file(vendor_mi_thermald, sysfs)
 rw_dir_file(vendor_mi_thermald, sysfs_batteryinfo)
+rw_dir_file(vendor_mi_thermald, sysfs_pwrinfo)
 rw_dir_file(vendor_mi_thermald, sysfs_leds)
 rw_dir_file(vendor_mi_thermald, sysfs_power_supply)
 rw_dir_file(vendor_mi_thermald, sysfs_therm)
@@ -20,6 +21,8 @@ allow vendor_mi_thermald sysfs_devices_system_cpu:file rw_file_perms;
 
 allow vendor_mi_thermald thermal_core_data_file:dir rw_dir_perms;
 allow vendor_mi_thermald thermal_core_data_file:file create_file_perms;
+
+allow vendor_mi_thermald sysfs_pwrinfo:{ file lnk_file } rw_file_perms;
 
 # Allow mi_thermald to access vendor_sysfs_corecontrol
 r_dir_file(vendor_mi_thermald, vendor_sysfs_corecontrol)
