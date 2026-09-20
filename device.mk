@@ -215,6 +215,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.log.tag.surfaceflinger=S
 
+# MTK GED KPI
+$(call soong_config_set_bool,libgui,support_mtk_ged_kpi,true)
+
 # Media
 ifeq ($(TARGET_INCLUDES_DOLBY),true)
 PRODUCT_COPY_FILES += \
