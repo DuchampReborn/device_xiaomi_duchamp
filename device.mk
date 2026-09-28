@@ -268,7 +268,7 @@ PRODUCT_PACKAGES += \
     DuchampWifiOverlay
 
 PRODUCT_PACKAGES += \
-    LineageApertureOverlayDuchamp
+    ApertureOverlayDuchamp
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
