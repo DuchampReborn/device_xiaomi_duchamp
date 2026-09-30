@@ -20,7 +20,6 @@ import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.IBinder;
-import android.os.UEventObserver;
 import android.util.Log;
 
 import androidx.preference.PreferenceManager;
@@ -32,30 +31,21 @@ import java.io.IOException;
 public class TurboChargingService extends Service {
     private static final String TAG = "TurboCharging";
     private static final String CHARGE_CURRENT_FILE = "/sys/class/power_supply/battery/constant_charge_current";
+    private static final String PREF_TURBO_ENABLED = "turbo_enable";
+    private static final String PREF_TURBO_CURRENT = "turbo_current";
 
-    private UEventObserver mObserver;
     private SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener;
 
     @Override
     public void onCreate() {
+        super.onCreate();
         Log.d(TAG, "Starting");
-
-        mObserver = new UEventObserver() {
-            @Override
-            public void onUEvent(UEvent event) {
-                String chargerStatus = event.get("POWER_SUPPLY_ONLINE");
-                if (chargerStatus != null && chargerStatus.equals("1")) {
-                    updateChargeCurrent();
-                }
-            }
-        };
-        mObserver.startObserving("DEVPATH=/sys/class/power_supply/usb");
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         preferenceChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
             @Override
             public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-                if (key.equals("turbo_enable") || key.equals("turbo_current")) {
+                if (key.equals(PREF_TURBO_ENABLED) || key.equals(PREF_TURBO_CURRENT)) {
                     updateChargeCurrent();
                 }
             }
@@ -66,11 +56,11 @@ public class TurboChargingService extends Service {
     }
 
     private void updateChargeCurrent() {
-        boolean turboEnabled = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("turbo_enable", false);
+        boolean turboEnabled = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(PREF_TURBO_ENABLED, false);
         Log.i(TAG, "isTurbo=" + turboEnabled);
         String defaultValue = "21000000";
         if (turboEnabled) {
-            String currentValue = PreferenceManager.getDefaultSharedPreferences(this).getString("turbo_current", "22000000");
+            String currentValue = PreferenceManager.getDefaultSharedPreferences(this).getString(PREF_TURBO_CURRENT, "22000000");
             Log.i(TAG, "currentValue=" + currentValue);
             writeChargeCurrent(currentValue);
         } else {

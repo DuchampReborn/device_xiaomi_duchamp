@@ -107,6 +107,20 @@
             android:permission="TurboChargingService">
         </service>
 
+        <service
+            android:name=".turbocharging.BypassChargingTileService"
+            android:icon="@drawable/ic_bypass_charging_tile"
+            android:label="@string/bypass_charging_title"
+            android:exported="true"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="false" />
+        </service>
+
         <!-- Core Control -->
         <activity
             android:name=".corecontrol.CoreControlActivity"
@@ -124,4 +138,3 @@
         </activity>        
     </application>
 </manifest>
-

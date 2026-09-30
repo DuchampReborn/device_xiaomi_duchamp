@@ -16,3 +16,6 @@ type vendor_sysfs_touch, fs_type, sysfs_type;
 
 # Pwrinfo
 type sysfs_pwrinfo, fs_type, sysfs_type;
+
+# Bypass Charge
+type proc_mtk_bypass, fs_type, proc_type;

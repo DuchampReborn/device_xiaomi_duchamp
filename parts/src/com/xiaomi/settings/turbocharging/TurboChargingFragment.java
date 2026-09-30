@@ -27,7 +27,9 @@ import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.widget.MainSwitchPreference;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -37,11 +39,14 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
 
     private static final String TAG = "TurboChargingFragment";
     private static final String CHARGE_CURRENT_FILE = "/sys/class/power_supply/battery/constant_charge_current";
+    private static final String BYPASS_CHARGING_FILE = "/proc/mtk_battery_cmd/current_cmd";
     private static final String PREF_TURBO_ENABLED = "turbo_enable";
     private static final String PREF_TURBO_CURRENT = "turbo_current";
+    private static final String PREF_BYPASS_CHARGING = "bypass_charging_enable";
 
     private SwitchPreferenceCompat mTurboEnabled;
     private ListPreference mTurboCurrent;
+    private SwitchPreferenceCompat mBypassChargingEnabled;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -53,31 +58,59 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
         mTurboCurrent = (ListPreference) findPreference(PREF_TURBO_CURRENT);
         mTurboCurrent.setOnPreferenceChangeListener(this);
         mTurboCurrent.setEnabled(mTurboEnabled.isChecked());
+
+        mBypassChargingEnabled = (SwitchPreferenceCompat) findPreference(PREF_BYPASS_CHARGING);
+        mBypassChargingEnabled.setOnPreferenceChangeListener(this);
     }
 
     @Override
-       public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mTurboEnabled) {
-        boolean enabled = (boolean) newValue;
-        mTurboCurrent.setEnabled(enabled);
-
-        updateChargeCurrent();
-
-        return true;
-          } else if (preference == mTurboCurrent) {
-        String value = (String) newValue;
-        PreferenceManager.getDefaultSharedPreferences(getActivity())
-                .edit()
-                .putString(PREF_TURBO_CURRENT, value)
-                .apply();
-
-        updateChargeCurrent();
-
-            return true;
-        }
-            return false;
+    public void onResume() {
+        super.onResume();
+        syncBypassChargingToggle();
     }
 
+    private void syncBypassChargingToggle() {
+        boolean nodeValue = readBypassChargingNode();
+        Log.i(TAG, "syncBypassChargingToggle: node=" + nodeValue);
+
+        mBypassChargingEnabled.setOnPreferenceChangeListener(null);
+        mBypassChargingEnabled.setChecked(nodeValue);
+        mBypassChargingEnabled.setOnPreferenceChangeListener(this);
+    }
+
+    private boolean readBypassChargingNode() {
+        try (BufferedReader reader = new BufferedReader(new FileReader(BYPASS_CHARGING_FILE))) {
+            String line = reader.readLine();
+            if (line != null) {
+                String[] parts = line.trim().split("\\s+");
+                return parts.length > 1 && parts[1].equals("1");
+            }
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to read Bypass Charging node", e);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mTurboEnabled) {
+            boolean enabled = (boolean) newValue;
+            mTurboCurrent.setEnabled(enabled);
+            return true;
+        } else if (preference == mTurboCurrent) {
+            String value = (String) newValue;
+            PreferenceManager.getDefaultSharedPreferences(getActivity())
+                    .edit()
+                    .putString(PREF_TURBO_CURRENT, value)
+                    .apply();
+            return true;
+        } else if (preference == mBypassChargingEnabled) {
+            boolean enabled = (boolean) newValue;
+            updateBypassCharging(enabled);
+            return true;
+        }
+        return false;
+    }
 
     private void updateChargeCurrent() {
         boolean turboEnabled = PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean(PREF_TURBO_ENABLED, false);
@@ -103,6 +136,16 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
             Log.e(TAG, "Invalid charge current value: " + value, e);
         } catch (IOException e) {
             Log.e(TAG, "Failed to update charge current", e);
+        }
+    }
+
+    private void updateBypassCharging(boolean enabled) {
+        String value = enabled ? "0 1" : "0 0";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(BYPASS_CHARGING_FILE))) {
+            writer.write(value);
+            Log.i(TAG, "Updated Bypass Charge to " + value);
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to update Bypass Charge", e);
         }
     }
 }

@@ -30,15 +30,19 @@
     <string name="thermalprofile_current_mode">Current mode</string>
 
         <!-- Charge Limit -->
-    <string name="turbo_charge_title">Charge Speed Limit</string>
+    <string name="turbo_charge_title">Charging Toolkit</string>
     <string name="turbo_enable_title">Enable Charge Speed Limit</string>
-    <string name="turbo_charge_summary">Enable Charge Speed Limit for different charging modes up to 67W</string>
+    <string name="turbo_charge_summary">Configure Charge Speed Limit and Bypass Charging</string>
     <string name="turbo_charge_current_pref_title">Charging wattage</string>
     <string name="turbo_mode_one">18W</string>
     <string name="turbo_mode_two">30W</string>
     <string name="turbo_mode_three">67W</string>
     <string name="turbo_charge_tile_label">Charge Speed Limit</string>
     <string name="turbo_charge_tile_content_description">Toggle Charge Speed Limit</string>
+
+    <!-- Bypass Charging -->
+    <string name="bypass_charging_title">Bypass Charging</string>
+    <string name="bypass_charging_summary">Power the device directly from the charger to reduce heat and battery wear</string>
 
     <!-- Core Control -->
     <string name="core_control_title">Core Control</string>
