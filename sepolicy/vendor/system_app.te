@@ -59,3 +59,6 @@ allow system_app vendor_sysfs_corecontrol:file { getattr open read write };
 allow system_app sysfs_batteryinfo:dir search;
 allow system_app sysfs_pwrinfo:dir search;
 allow system_app sysfs_pwrinfo:file rw_file_perms;
+
+allow system_app proc_type:dir search;
+allow system_app proc_mtk_bypass:file rw_file_perms;

@@ -26,10 +26,12 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import com.xiaomi.settings.thermal.ThermalProfileActivity;
+import com.xiaomi.settings.turbocharging.TurboChargingActivity;
 
 public class TileEntryActivity extends Activity {
     private static final String TAG = "TileEntryActivity";
     private static final String THERMAL_TILE = "com.xiaomi.settings.thermal.ThermalProfileTileService";
+    private static final String BYPASS_CHARGING_TILE = "com.xiaomi.settings.turbocharging.BypassChargingTileService";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,6 +48,8 @@ public class TileEntryActivity extends Activity {
 
         if (THERMAL_TILE.equals(sourceClassName)) {
             intent = new Intent(this, ThermalProfileActivity.class);
+        } else if (BYPASS_CHARGING_TILE.equals(sourceClassName)) {
+            intent = new Intent(this, TurboChargingActivity.class);
         } else {
             Log.e(TAG, "Unknown tile: " + sourceClassName);
             finish();

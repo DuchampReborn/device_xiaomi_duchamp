@@ -30,4 +30,10 @@
         android:defaultValue="@integer/turbo_modes_default"
         android:summary="%s" />
 
+    <SwitchPreferenceCompat
+        android:key="bypass_charging_enable"
+        android:title="@string/bypass_charging_title"
+        android:summary="@string/bypass_charging_summary"
+        android:icon="@drawable/ic_m3_verified"
+        android:persistent="false" />
 </PreferenceScreen>

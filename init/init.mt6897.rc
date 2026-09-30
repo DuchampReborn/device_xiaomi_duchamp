@@ -299,6 +299,10 @@ on boot
     chown root radio /proc/net/netfilter/nfnetlink_log
     chown root radio /proc/net/netfilter/nfnetlink_queue
 
+    # Bypass Charge
+    chown system system /proc/mtk_battery_cmd/current_cmd
+    chmod 0664 /proc/mtk_battery_cmd/current_cmd
+
     # Power Manager
     write /sys/power/pm_freeze_timeout 2000
 
