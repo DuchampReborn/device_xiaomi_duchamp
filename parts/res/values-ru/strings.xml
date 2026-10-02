@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Настройки Xiaomi</string>
+    <string name="thermalprofile_title">Термальный профиль</string>
+    <string name="thermalprofile_default">Сбалансированный</string>
+    <string name="thermalprofile_performance">Производительность</string>
+    <string name="thermalprofile_battery">Энергосбережение</string>
+    <string name="thermalprofile_game">Игра</string>
+    <string name="thermalprofile_unknown">Неизвестно</string>
+    <string name="thermalprofile_auto_mode_title">Включить авто режим</string>
+    <string name="thermalprofile_auto_mode_summary">Автоматически переключаться в режим Энергосбережения при выключении экрана и восстанавливать предыдущий режим при включении.</string>
+    <string name="thermalprofile_auto_mode_note">Примечание: Более высокие частоты Boost (GPU свыше 740МГц и частоты boost CPU) доступны только в режимах Игра и Производительность.</string>
+    <string name="thermalprofile_current_mode">Текущий режим</string>
+    <string name="turbo_charge_title">Набор инструментов зарядки</string>
+    <string name="turbo_enable_title">Включить ограничение скорости зарядки</string>
+    <string name="turbo_charge_summary">Настроить ограничение скорости зарядки и обходную зарядку</string>
+    <string name="turbo_charge_current_pref_title">Мощность зарядки</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">Обходная зарядка</string>
+    <string name="bypass_charging_summary">Питать устройство напрямую от зарядного устройства для снижения нагрева и износа батареи</string>
+    <string name="core_control_header">Управление ядрами</string>
+    <string name="charging_header">Набор инструментов зарядки</string>
+    <string name="core_control_title">Управление ядрами</string>
+    <string name="core_control_description">Расширенное управление CPU. Отключение ядер может снизить расход батареи или тепловую нагрузку, но может повлиять на производительность и стабильность.\n\nКак минимум два малых ядра должны оставаться активными в любое время.</string>
+    <string name="core_control_min_little_warning">Как минимум 2 малых ядра должны оставаться активными</string>
+    <string name="core_0">Ядро 0 (Little)</string>
+    <string name="core_1">Ядро 1 (Little)</string>
+    <string name="core_2">Ядро 2 (Little)</string>
+    <string name="core_3">Ядро 3 (Little)</string>
+    <string name="core_4">Ядро 4 (Big)</string>
+    <string name="core_5">Ядро 5 (Big)</string>
+    <string name="core_6">Ядро 6 (Big)</string>
+    <string name="core_7">Ядро 7 (Prime)</string>
+    <string name="app_summary">Управление производительностью, термальным режимом и зарядкой </string>
+    <string name="home_subtitle">Управление производительностью и настройкой</string>
+    <string name="nav_home">Главная</string>
+    <string name="nav_thermals">Термальные</string>
+    <string name="nav_charging">Зарядка</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">Термальный профиль</string>
+    <string name="home_card_charging_title">Зарядка</string>
+    <string name="home_card_cores_title">Управление ядрами</string>
+    <string name="home_card_perapp_title">Термальный профиль для приложений</string>
+    <string name="home_charging_on">Турбо вкл</string>
+    <string name="home_charging_off">Турбо выкл</string>
+    <string name="home_bypass_on">Обход вкл</string>
+    <string name="home_bypass_off">Обход выкл</string>
+    <string name="home_bypass_unavailable">Обход недоступен</string>
+    <string name="home_cores_status">%1$d из %2$d ядер активно</string>
+    <string name="home_tap_hint">Нажмите, чтобы открыть</string>
+    <string name="perapp_title">Термальные профили для приложений</string>
+    <string name="perapp_status_on_summary">%1$d приложений настроено</string>
+    <string name="perapp_status_off">Выкл</string>
+    <string name="perapp_enable_title">Включить профили для приложений</string>
+    <string name="perapp_enable_summary">Автоматически применять назначенный термальный профиль, когда приложение переходит на передний план, и восстанавливать глобальный профиль при выходе.</string>
+    <string name="perapp_search_hint">Поиск приложений</string>
+    <string name="perapp_default_chip">По умолчанию</string>
+    <string name="perapp_profile_system">Системный по умолчанию</string>
+    <string name="perapp_footer">Когда профили для приложений включены, термальная конфигурация меняется при переключении приложений. Глобальный профиль применяется ко всем остальным приложениям.</string>
+    <string name="perapp_loading">Загрузка приложений\u2026</string>
+    <string name="perapp_back">Назад</string>
+</resources>

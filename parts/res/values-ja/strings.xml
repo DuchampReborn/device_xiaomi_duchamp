@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Xiaomi 設定</string>
+    <string name="thermalprofile_title">サーマルプロファイル</string>
+    <string name="thermalprofile_default">バランス</string>
+    <string name="thermalprofile_performance">パフォーマンス</string>
+    <string name="thermalprofile_battery">バッテリーセーバー</string>
+    <string name="thermalprofile_game">ゲーム</string>
+    <string name="thermalprofile_unknown">不明</string>
+    <string name="thermalprofile_auto_mode_title">自動モードを有効化</string>
+    <string name="thermalprofile_auto_mode_summary">画面がオフになったら自動的にバッテリーセーバーモードに切り替え、画面がオンになったら前のモードに復元します。</string>
+    <string name="thermalprofile_auto_mode_note">注:より高いブースト周波数(GPU 740MHz以上およびCPUブースト周波数)はゲームモードとパフォーマンスモードでのみ利用可能です。</string>
+    <string name="thermalprofile_current_mode">現在のモード</string>
+    <string name="turbo_charge_title">充電ツールキット</string>
+    <string name="turbo_enable_title">充電速度制限を有効化</string>
+    <string name="turbo_charge_summary">充電速度制限とバイパス充電を設定</string>
+    <string name="turbo_charge_current_pref_title">充電ワット数</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">バイパス充電</string>
+    <string name="bypass_charging_summary">発熱とバッテリーの消耗を減らすため、充電器から直接デバイスに電力を供給</string>
+    <string name="core_control_header">コア制御</string>
+    <string name="charging_header">充電ツールキット</string>
+    <string name="core_control_title">コア制御</string>
+    <string name="core_control_description">高度なCPU制御。コアをオフにするとバッテリーや熱負荷を節約できますが、パフォーマンスと安定性に影響する場合があります。\n\n少なくとも2つのLittleコアを常にオンラインにしておく必要があります。</string>
+    <string name="core_control_min_little_warning">少なくとも2つのLittleコアをオンラインにしておく必要があります</string>
+    <string name="core_0">コア 0 (Little)</string>
+    <string name="core_1">コア 1 (Little)</string>
+    <string name="core_2">コア 2 (Little)</string>
+    <string name="core_3">コア 3 (Little)</string>
+    <string name="core_4">コア 4 (Big)</string>
+    <string name="core_5">コア 5 (Big)</string>
+    <string name="core_6">コア 6 (Big)</string>
+    <string name="core_7">コア 7 (Prime)</string>
+    <string name="app_summary">パフォーマンス、サーマル、充電コントロール </string>
+    <string name="home_subtitle">パフォーマンス &amp; チューニングコントロール</string>
+    <string name="nav_home">ホーム</string>
+    <string name="nav_thermals">サーマル</string>
+    <string name="nav_charging">充電</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">サーマルプロファイル</string>
+    <string name="home_card_charging_title">充電</string>
+    <string name="home_card_cores_title">コア制御</string>
+    <string name="home_card_perapp_title">アプリ別サーマル</string>
+    <string name="home_charging_on">ターボオン</string>
+    <string name="home_charging_off">ターボオフ</string>
+    <string name="home_bypass_on">バイパスオン</string>
+    <string name="home_bypass_off">バイパスオフ</string>
+    <string name="home_bypass_unavailable">バイパス利用不可</string>
+    <string name="home_cores_status">%2$d 個中 %1$d 個のコアがオンライン</string>
+    <string name="home_tap_hint">タップして開く</string>
+    <string name="perapp_title">アプリ別サーマルプロファイル</string>
+    <string name="perapp_status_on_summary">%1$d 個のアプリを設定済み</string>
+    <string name="perapp_status_off">オフ</string>
+    <string name="perapp_enable_title">アプリ別プロファイルを有効化</string>
+    <string name="perapp_enable_summary">アプリがフォアグラウンドに来たときに割り当てられたサーマルプロファイルを自動的に適用し、離脱時にグローバルプロファイルを復元します。</string>
+    <string name="perapp_search_hint">アプリを検索</string>
+    <string name="perapp_default_chip">デフォルト</string>
+    <string name="perapp_profile_system">システムデフォルト</string>
+    <string name="perapp_footer">アプリ別プロファイルが有効な場合、アプリを切り替えるとサーマル設定が切り替わります。グローバルプロファイルは他のすべてのアプリに適用されます。</string>
+    <string name="perapp_loading">アプリを読み込み中\u2026</string>
+    <string name="perapp_back">戻る</string>
+</resources>

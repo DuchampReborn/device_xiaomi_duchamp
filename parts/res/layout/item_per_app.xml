@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-License-Identifier: Apache-2.0
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:minHeight="64dp"
+    android:paddingStart="@dimen/m3_space_m"
+    android:paddingEnd="@dimen/m3_space_m"
+    android:paddingTop="@dimen/m3_space_s"
+    android:paddingBottom="@dimen/m3_space_s"
+    android:background="?android:attr/selectableItemBackground">
+
+    <FrameLayout
+        android:layout_width="@dimen/m3_pref_icon_chip"
+        android:layout_height="@dimen/m3_pref_icon_chip"
+        android:background="@drawable/bg_icon_chip_rounded">
+
+        <ImageView
+            android:id="@+id/iv_app_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:importantForAccessibility="no" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/m3_space_l"
+        android:layout_marginEnd="@dimen/m3_space_m"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:textColor="?android:attr/textColorPrimary"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tv_app_package"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_app_profile_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_chip_idle"
+        android:paddingStart="@dimen/m3_space_m"
+        android:paddingEnd="@dimen/m3_space_m"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/m3_on_surface_variant"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+</LinearLayout>

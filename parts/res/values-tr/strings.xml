@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Xiaomi Ayarları</string>
+    <string name="thermalprofile_title">Termal profil</string>
+    <string name="thermalprofile_default">Dengeli</string>
+    <string name="thermalprofile_performance">Performans</string>
+    <string name="thermalprofile_battery">Pil tasarrufu</string>
+    <string name="thermalprofile_game">Oyun</string>
+    <string name="thermalprofile_unknown">Bilinmiyor</string>
+    <string name="thermalprofile_auto_mode_title">Otomatik modu etkinleştir</string>
+    <string name="thermalprofile_auto_mode_summary">Ekran kapandığında otomatik olarak Pil tasarrufu moduna geç ve ekran açıldığında önceki modu geri yükle.</string>
+    <string name="thermalprofile_auto_mode_note">Not: Daha yüksek Boost frekansları (GPU 740MHz üzeri ve CPU boost frekansları) yalnızca Oyun ve Performans modunda kullanılabilir.</string>
+    <string name="thermalprofile_current_mode">Mevcut mod</string>
+    <string name="turbo_charge_title">Şarj araç seti</string>
+    <string name="turbo_enable_title">Şarj hızı sınırını etkinleştir</string>
+    <string name="turbo_charge_summary">Şarj hızı sınırını ve bypass şarjı yapılandır</string>
+    <string name="turbo_charge_current_pref_title">Şarj wattı</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">Bypass şarj</string>
+    <string name="bypass_charging_summary">Isı ve pil aşınmasını azaltmak için cihaza doğrudan şarj cihazından güç ver</string>
+    <string name="core_control_header">Çekirdek kontrolü</string>
+    <string name="charging_header">Şarj araç seti</string>
+    <string name="core_control_title">Çekirdek kontrolü</string>
+    <string name="core_control_description">Gelişmiş CPU kontrolü. Çekirdekleri kapatmak pil veya termal yükü tasarruf edebilir, ancak performans ve kararlılığı etkileyebilir.\n\nHer zaman en az iki little çekirdek aktif kalmalıdır.</string>
+    <string name="core_control_min_little_warning">En az 2 little çekirdek aktif kalmalıdır</string>
+    <string name="core_0">Çekirdek 0 (Little)</string>
+    <string name="core_1">Çekirdek 1 (Little)</string>
+    <string name="core_2">Çekirdek 2 (Little)</string>
+    <string name="core_3">Çekirdek 3 (Little)</string>
+    <string name="core_4">Çekirdek 4 (Big)</string>
+    <string name="core_5">Çekirdek 5 (Big)</string>
+    <string name="core_6">Çekirdek 6 (Big)</string>
+    <string name="core_7">Çekirdek 7 (Prime)</string>
+    <string name="app_summary">Performans, termal ve şarj kontrolleri </string>
+    <string name="home_subtitle">Performans &amp; ayar kontrolleri</string>
+    <string name="nav_home">Ana sayfa</string>
+    <string name="nav_thermals">Termaller</string>
+    <string name="nav_charging">Şarj</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">Termal profil</string>
+    <string name="home_card_charging_title">Şarj</string>
+    <string name="home_card_cores_title">Çekirdek kontrolü</string>
+    <string name="home_card_perapp_title">Uygulama başına termal</string>
+    <string name="home_charging_on">Turbo açık</string>
+    <string name="home_charging_off">Turbo kapalı</string>
+    <string name="home_bypass_on">Bypass açık</string>
+    <string name="home_bypass_off">Bypass kapalı</string>
+    <string name="home_bypass_unavailable">Bypass kullanılamıyor</string>
+    <string name="home_cores_status">%2$d çekirdeğin %1$d tanesi aktif</string>
+    <string name="home_tap_hint">Açmak için dokun</string>
+    <string name="perapp_title">Uygulama başına termal profiller</string>
+    <string name="perapp_status_on_summary">%1$d uygulama yapılandırıldı</string>
+    <string name="perapp_status_off">Kapalı</string>
+    <string name="perapp_enable_title">Uygulama başına profilleri etkinleştir</string>
+    <string name="perapp_enable_summary">Bir uygulama ön plana geldiğinde atanmış termal profili otomatik olarak uygula ve ayrılırken genel profili geri yükle.</string>
+    <string name="perapp_search_hint">Uygulamaları ara</string>
+    <string name="perapp_default_chip">Varsayılan</string>
+    <string name="perapp_profile_system">Sistem varsayılanı</string>
+    <string name="perapp_footer">Uygulama başına profiller etkinleştirildiğinde, uygulamalar arasında geçiş yaptığınızda termal yapılandırma değişir. Genel profil diğer tüm uygulamalara uygulanır.</string>
+    <string name="perapp_loading">Uygulamalar yükleniyor\u2026</string>
+    <string name="perapp_back">Geri</string>
+</resources>

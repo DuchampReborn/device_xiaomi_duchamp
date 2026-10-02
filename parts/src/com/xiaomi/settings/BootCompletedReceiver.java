@@ -23,6 +23,8 @@ import android.view.Display.HdrCapabilities;
 import androidx.preference.PreferenceManager;
 
 import com.xiaomi.settings.display.ColorService;
+import com.xiaomi.settings.thermal.PerAppProfileService;
+import com.xiaomi.settings.thermal.PerAppProfileStore;
 import com.xiaomi.settings.thermal.ThermalProfileFragment;
 import com.xiaomi.settings.turbocharging.TurboChargingService;
 import com.xiaomi.settings.utils.FileUtils;
@@ -47,10 +49,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private void handleLockedBootCompleted(Context context) {
         if (DEBUG) Log.i(TAG, "Handling locked boot completed.");
         try {
-            // Start necessary services
             startServices(context);
 
-            // Override HDR types
             overrideHdrTypes(context);
         } catch (Exception e) {
             Log.e(TAG, "Error during locked boot completed processing", e);
@@ -59,27 +59,26 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     private void handleBootCompleted(Context context) {
         if (DEBUG) Log.i(TAG, "Handling boot completed.");
-        // Add additional boot-completed actions if needed
     }
 
     private void startServices(Context context) {
         if (DEBUG) Log.i(TAG, "Starting services...");
 
-        // Start Color Mode Service
         context.startServiceAsUser(new Intent(context, ColorService.class), UserHandle.CURRENT);
 
-        // Start TurboChargingService
         Intent turboChargingIntent = new Intent(context, TurboChargingService.class);
         context.startService(turboChargingIntent);
 
-        // Restore thermal profile from SharedPreferences
         restoreThermalProfile(context);
 
-        // Re-start the auto mode service if it was enabled before reboot
         if (PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(ThermalProfileFragment.PREF_AUTO_MODE, false)) {
             context.startService(new Intent(context,
                     com.xiaomi.settings.thermal.ThermalAutoModeService.class));
+        }
+
+        if (PerAppProfileStore.INSTANCE.isEnabled(context)) {
+            context.startService(new Intent(context, PerAppProfileService.class));
         }
     }
 

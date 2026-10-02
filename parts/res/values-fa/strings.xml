@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">تنظیمات شیائومی</string>
+    <string name="thermalprofile_title">پروفایل حرارتی</string>
+    <string name="thermalprofile_default">متعادل</string>
+    <string name="thermalprofile_performance">عملکرد</string>
+    <string name="thermalprofile_battery">ذخیره‌ساز باتری</string>
+    <string name="thermalprofile_game">بازی</string>
+    <string name="thermalprofile_unknown">نامشخص</string>
+    <string name="thermalprofile_auto_mode_title">فعال‌سازی حالت خودکار</string>
+    <string name="thermalprofile_auto_mode_summary">هنگام خاموش شدن صفحه به طور خودکار به حالت ذخیره‌ساز باتری سوییچ کنید و هنگام روشن شدن صفحه حالت قبلی را بازیابی کنید.</string>
+    <string name="thermalprofile_auto_mode_note">توجه: فرکانس‌های بوسٹ بالاتر (GPU بالای 740 مگاهرتز و فرکانس‌های بوسٹ CPU) فقط در حالت بازی و عملکرد در دسترس هستند.</string>
+    <string name="thermalprofile_current_mode">حالت فعلی</string>
+    <string name="turbo_charge_title">جعبه‌ابزار شارژ</string>
+    <string name="turbo_enable_title">فعال‌سازی محدودیت سرعت شارژ</string>
+    <string name="turbo_charge_summary">پیکربندی محدودیت سرعت شارژ و شارژ بای‌پس</string>
+    <string name="turbo_charge_current_pref_title">وات شارژ</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">شارژ بای‌پس</string>
+    <string name="bypass_charging_summary">تأمین برق مستقیم دستگاه از شارژر برای کاهش گرما و فرسودگی باتری</string>
+    <string name="core_control_header">کنترل هسته</string>
+    <string name="charging_header">جعبه‌ابزار شارژ</string>
+    <string name="core_control_title">کنترل هسته</string>
+    <string name="core_control_description">کنترل پیشرفته CPU. خاموش کردن هسته‌ها ممکن است باتری یا بار حرارتی را ذخیره کند، اما ممکن است بر عملکرد و پایداری تأثیر بگذارد.\n\nحداقل دو هسته کوچک باید همیشه آنلاین بمانند.</string>
+    <string name="core_control_min_little_warning">حداقل 2 هسته کوچک باید آنلاین بمانند</string>
+    <string name="core_0">هسته 0 (کوچک)</string>
+    <string name="core_1">هسته 1 (کوچک)</string>
+    <string name="core_2">هسته 2 (کوچک)</string>
+    <string name="core_3">هسته 3 (کوچک)</string>
+    <string name="core_4">هسته 4 (بزرگ)</string>
+    <string name="core_5">هسته 5 (بزرگ)</string>
+    <string name="core_6">هسته 6 (بزرگ)</string>
+    <string name="core_7">هسته 7 (اصلی)</string>
+    <string name="app_summary">کنترل‌های عملکرد، حرارتی و شارژ </string>
+    <string name="home_subtitle">کنترل‌های عملکرد و تنظیم</string>
+    <string name="nav_home">خانه</string>
+    <string name="nav_thermals">حرارتی</string>
+    <string name="nav_charging">شارژ</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">پروفایل حرارتی</string>
+    <string name="home_card_charging_title">شارژ</string>
+    <string name="home_card_cores_title">کنترل هسته</string>
+    <string name="home_card_perapp_title">حرارتی هر برنامه</string>
+    <string name="home_charging_on">توربو روشن</string>
+    <string name="home_charging_off">توربو خاموش</string>
+    <string name="home_bypass_on">بای‌پس روشن</string>
+    <string name="home_bypass_off">بای‌پس خاموش</string>
+    <string name="home_bypass_unavailable">بای‌پس در دسترس نیست</string>
+    <string name="home_cores_status">%1$d از %2$d هسته آنلاین</string>
+    <string name="home_tap_hint">برای باز کردن ضربه بزنید</string>
+    <string name="perapp_title">پروفایل‌های حرارتی هر برنامه</string>
+    <string name="perapp_status_on_summary">%1$d برنامه پیکربندی شد</string>
+    <string name="perapp_status_off">خاموش</string>
+    <string name="perapp_enable_title">فعال‌سازی پروفایل‌های هر برنامه</string>
+    <string name="perapp_enable_summary">هنگام آمدن برنامه به پیش‌زمینه، پروفایل حرارتی اختصاص‌داده‌شده به طور خودکار اعمال شود و هنگام ترک، پروفایل جهانی بازیابی شود.</string>
+    <string name="perapp_search_hint">جستجوی برنامه‌ها</string>
+    <string name="perapp_default_chip">پیش‌فرض</string>
+    <string name="perapp_profile_system">پیش‌فرض سیستم</string>
+    <string name="perapp_footer">وقتی پروفایل‌های هر برنامه فعال باشند، پیکربندی حرارتی هنگام تعویض برنامه‌ها تغییر می‌کند. پروفایل جهانی برای سایر برنامه‌ها اعمال می‌شود.</string>
+    <string name="perapp_loading">در حال بارگذاری برنامه‌ها\u2026</string>
+    <string name="perapp_back">بازگشت</string>
+</resources>

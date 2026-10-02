@@ -18,12 +18,16 @@ package com.xiaomi.settings.corecontrol;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
 import com.xiaomi.settings.R;
+import com.xiaomi.settings.ui.PageHeader;
 
 import java.io.File;
 
@@ -32,6 +36,12 @@ public class CoreControlFragment extends PreferenceFragment implements Preferenc
     private static final int NUM_CORES = 8;
 
     private SwitchPreference[] mCorePrefs = new SwitchPreference[NUM_CORES];
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return PageHeader.wrap(inflater, super.onCreateView(inflater, container, savedInstanceState),
+                R.string.core_control_header);
+    }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -54,7 +64,7 @@ public class CoreControlFragment extends PreferenceFragment implements Preferenc
         for (int i = 0; i < NUM_CORES; i++) {
             if (preference == mCorePrefs[i]) {
                 if (!requestedState && !canOffline(i)) {
-                    Toast.makeText(getContext(), "At least 2 little cores must remain online", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), R.string.core_control_min_little_warning, Toast.LENGTH_SHORT).show();
                     return false;
                 }
                 setCoreState(i, requestedState);

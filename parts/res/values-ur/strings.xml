@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Xiaomi ترتیبات</string>
+    <string name="thermalprofile_title">تھرمل پروفائل</string>
+    <string name="thermalprofile_default">متوازن</string>
+    <string name="thermalprofile_performance">کارکردگی</string>
+    <string name="thermalprofile_battery">بیٹری سیور</string>
+    <string name="thermalprofile_game">گیم</string>
+    <string name="thermalprofile_unknown">نامعلوم</string>
+    <string name="thermalprofile_auto_mode_title">آٹو موڈ کو فعال کریں</string>
+    <string name="thermalprofile_auto_mode_summary">اسکرین بند ہونے پر بیٹری سیور موڈ میں خودکار طور پر سوئچ کریں اور اسکرین آن ہونے پر پچھلا موڈ بحال کریں۔</string>
+    <string name="thermalprofile_auto_mode_note">نوٹ: اعلیٰ بوسٹ فریکوئنسیاں (GPU 740MHz سے اوپر اور CPU بوسٹ فریکوئنسیاں) صرف گیم اور کارکردگی موڈ میں دستیاب ہیں۔</string>
+    <string name="thermalprofile_current_mode">موجودہ موڈ</string>
+    <string name="turbo_charge_title">چارجنگ ٹول کٹ</string>
+    <string name="turbo_enable_title">چارج اسپیڈ لِمت کو فعال کریں</string>
+    <string name="turbo_charge_summary">چارج اسپیڈ لِمت اور بائی پاس چارجنگ کنفیگر کریں</string>
+    <string name="turbo_charge_current_pref_title">چارجنگ واٹیج</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">بائی پاس چارجنگ</string>
+    <string name="bypass_charging_summary">گرمی اور بیٹری کے استعمال کو کم کرنے کے لیے ڈیوائس کو براہ راست چارجر سے طاقت دیں</string>
+    <string name="core_control_header">کور کنٹرول</string>
+    <string name="charging_header">چارجنگ ٹول باکس</string>
+    <string name="core_control_title">کور کنٹرول</string>
+    <string name="core_control_description">اعلی درجے کا CPU کنٹرول۔ کورز کو بند کرنے سے بیٹری یا تھرمل لوڈ بچ سکتا ہے، لیکن کارکردگی اور استحکام متاثر ہو سکتے ہیں۔\n\nکم از کم دو لٹل کورز ہمیشہ آن لائن رہنا چاہئیں۔</string>
+    <string name="core_control_min_little_warning">کم از کم 2 لٹل کورز آن لائن رہنا چاہئیں</string>
+    <string name="core_0">کور 0 (لٹل)</string>
+    <string name="core_1">کور 1 (لٹل)</string>
+    <string name="core_2">کور 2 (لٹل)</string>
+    <string name="core_3">کور 3 (لٹل)</string>
+    <string name="core_4">کور 4 (بڑا)</string>
+    <string name="core_5">کور 5 (بڑا)</string>
+    <string name="core_6">کور 6 (بڑا)</string>
+    <string name="core_7">کور 7 (پرائم)</string>
+    <string name="app_summary">کارکردگی، تھرمل اور چارجنگ کنٹرول </string>
+    <string name="home_subtitle">کارکردگی اور ٹیوننگ کنٹرول</string>
+    <string name="nav_home">ہوم</string>
+    <string name="nav_thermals">تھرمل</string>
+    <string name="nav_charging">چارجنگ</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">تھرمل پروفائل</string>
+    <string name="home_card_charging_title">چارجنگ</string>
+    <string name="home_card_cores_title">کور کنٹرول</string>
+    <string name="home_card_perapp_title">فی ایپ تھرمل</string>
+    <string name="home_charging_on">ٹربو آن</string>
+    <string name="home_charging_off">ٹربو آف</string>
+    <string name="home_bypass_on">بائی پاس آن</string>
+    <string name="home_bypass_off">بائی پاس آف</string>
+    <string name="home_bypass_unavailable">بائی پاس دستیاب نہیں</string>
+    <string name="home_cores_status">%2$d میں سے %1$d کورز آن لائن</string>
+    <string name="home_tap_hint">کھولنے کے لیے ٹیپ کریں</string>
+    <string name="perapp_title">فی ایپ تھرمل پروفائلز</string>
+    <string name="perapp_status_on_summary">%1$d ایپس کنفیگر شدہ</string>
+    <string name="perapp_status_off">آف</string>
+    <string name="perapp_enable_title">فی ایپ پروفائلز کو فعال کریں</string>
+    <string name="perapp_enable_summary">جب کوئی ایپ پیش منظر میں آئے تو اسے تفویض کردہ تھرمل پروفائل خودکار طور پر لاگو کریں اور چھوڑنے پر عالمی پروفائل بحال کریں۔</string>
+    <string name="perapp_search_hint">ایپس تلاش کریں</string>
+    <string name="perapp_default_chip">ڈیفالٹ</string>
+    <string name="perapp_profile_system">سسٹم ڈیفالٹ</string>
+    <string name="perapp_footer">جب فی ایپ پروفائلز فعال ہوں، تو ایپس بدلتے وقت تھرمل کنفیگ بدل جاتی ہے۔ عالمی پروفائل تمام دیگر ایپس پر لاگو ہوتی ہے۔</string>
+    <string name="perapp_loading">ایپس لوڈ ہو رہی ہیں\u2026</string>
+    <string name="perapp_back">واپس</string>
+</resources>

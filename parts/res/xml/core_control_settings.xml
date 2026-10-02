@@ -34,7 +34,6 @@
         android:key="core_7"
         android:title="@string/core_7" />
 
-    <!-- M3 footer: display-only informational row (key preserved) -->
     <Preference
         android:key="footer"
         android:layout="@layout/xp_preference_footer"

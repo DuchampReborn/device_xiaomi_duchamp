@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-License-Identifier: Apache-2.0
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/m3_space_l"
+        android:paddingEnd="@dimen/m3_space_l"
+        android:paddingTop="@dimen/m3_space_l"
+        android:paddingBottom="140dp">
+
+        <TextView
+            android:id="@+id/home_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="@string/app_name"
+            android:textSize="@dimen/header_title_size"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <TextView
+            android:id="@+id/home_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="2dp"
+            android:text="@string/home_subtitle"
+            android:textSize="14sp"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m3_space_xl" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <FrameLayout
+                android:id="@+id/card_thermal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="@dimen/home_card_min_height"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/m3_card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="top"
+                    android:padding="@dimen/m3_space_xl">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/home_icon_chip"
+                        android:layout_height="@dimen/home_icon_chip"
+                        android:background="@drawable/bg_icon_chip_rounded">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_thermal_tile"
+                            android:tint="?android:attr/colorControlNormal"
+                            android:importantForAccessibility="no" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m3_space_l"
+                        android:text="@string/home_card_thermal_title"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_thermal_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textSize="13sp"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/thermalprofile_default" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="@dimen/m3_space_m"
+                android:layout_height="1dp" />
+
+            <FrameLayout
+                android:id="@+id/card_charging"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="@dimen/home_card_min_height"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/m3_card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="top"
+                    android:padding="@dimen/m3_space_xl">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/home_icon_chip"
+                        android:layout_height="@dimen/home_icon_chip"
+                        android:background="@drawable/bg_icon_chip_rounded">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_m3_bolt"
+                            android:importantForAccessibility="no" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m3_space_l"
+                        android:text="@string/home_card_charging_title"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_charging_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textSize="13sp"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/home_charging_off" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/m3_space_m"
+            android:baselineAligned="false">
+
+            <FrameLayout
+                android:id="@+id/card_cores"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="@dimen/home_card_min_height"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/m3_card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="top"
+                    android:padding="@dimen/m3_space_xl">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/home_icon_chip"
+                        android:layout_height="@dimen/home_icon_chip"
+                        android:background="@drawable/bg_icon_chip_rounded">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_nav_cpu"
+                            android:importantForAccessibility="no" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m3_space_l"
+                        android:text="@string/home_card_cores_title"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_cores_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textSize="13sp"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/home_tap_hint" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="@dimen/m3_space_m"
+                android:layout_height="1dp" />
+
+            <FrameLayout
+                android:id="@+id/card_perapp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="@dimen/home_card_min_height"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/m3_card_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="top"
+                    android:padding="@dimen/m3_space_xl">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/home_icon_chip"
+                        android:layout_height="@dimen/home_icon_chip"
+                        android:background="@drawable/bg_icon_chip_rounded">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_m3_apps"
+                            android:importantForAccessibility="no" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m3_space_l"
+                        android:text="@string/home_card_perapp_title"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_perapp_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textSize="13sp"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/perapp_status_off" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -18,14 +18,15 @@ package com.xiaomi.settings.turbocharging;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
-
-import com.android.settingslib.widget.MainSwitchPreference;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -34,19 +35,25 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import com.xiaomi.settings.R;
+import com.xiaomi.settings.ui.PageHeader;
 
 public class TurboChargingFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "TurboChargingFragment";
-    private static final String CHARGE_CURRENT_FILE = "/sys/class/power_supply/battery/constant_charge_current";
-    private static final String BYPASS_CHARGING_FILE = "/proc/mtk_battery_cmd/current_cmd";
-    private static final String PREF_TURBO_ENABLED = "turbo_enable";
-    private static final String PREF_TURBO_CURRENT = "turbo_current";
-    private static final String PREF_BYPASS_CHARGING = "bypass_charging_enable";
+    public static final String BYPASS_CHARGING_FILE = "/proc/mtk_battery_cmd/current_cmd";
+    public static final String PREF_TURBO_ENABLED = "turbo_enable";
+    public static final String PREF_TURBO_CURRENT = "turbo_current";
+    public static final String PREF_BYPASS_CHARGING = "bypass_charging_enable";
 
     private SwitchPreferenceCompat mTurboEnabled;
     private ListPreference mTurboCurrent;
     private SwitchPreferenceCompat mBypassChargingEnabled;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return PageHeader.wrap(inflater, super.onCreateView(inflater, container, savedInstanceState),
+                R.string.charging_header);
+    }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -110,33 +117,6 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
             return true;
         }
         return false;
-    }
-
-    private void updateChargeCurrent() {
-        boolean turboEnabled = PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean(PREF_TURBO_ENABLED, false);
-        Log.i(TAG, "isTurbo=" + turboEnabled);
-        String defaultValue = "21000000";
-        if (turboEnabled) {
-            String currentValue = PreferenceManager.getDefaultSharedPreferences(getActivity()).getString(PREF_TURBO_CURRENT, "22000000");
-            Log.i(TAG, "currentValue=" + currentValue);
-            writeChargeCurrent(currentValue);
-        } else {
-            writeChargeCurrent(defaultValue);
-        }
-    }
-
-    private void writeChargeCurrent(String value) {
-        try {
-            Integer.parseInt(value);
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(CHARGE_CURRENT_FILE))) {
-                writer.write(value);
-                Log.i(TAG, "Updated Charging current to " + value);
-            }
-        } catch (NumberFormatException e) {
-            Log.e(TAG, "Invalid charge current value: " + value, e);
-        } catch (IOException e) {
-            Log.e(TAG, "Failed to update charge current", e);
-        }
     }
 
     private void updateBypassCharging(boolean enabled) {

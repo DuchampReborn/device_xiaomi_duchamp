@@ -14,11 +14,6 @@ import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import com.xiaomi.settings.utils.FileUtils
 
-/**
- * Registered in code (not manifest) by ThermalAutoModeService.
- * Switches to Battery Saver on screen off and restores the previous
- * profile on screen on, but only when Auto Mode is enabled.
- */
 class ThermalAutoModeReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
@@ -28,16 +23,13 @@ class ThermalAutoModeReceiver : BroadcastReceiver() {
 
         when (intent.action) {
             Intent.ACTION_SCREEN_OFF -> {
-                // Save the current profile so we can restore it on screen on
                 val current = FileUtils.readLineInt(ThermalProfileFragment.THERMAL_PROFILE_PATH)
                 prefs.edit()
                     .putString(PREF_PROFILE_BEFORE_SLEEP, current.toString())
                     .apply()
-                // Switch to Battery Saver
                 applyProfile(prefs, ThermalProfileFragment.THERMAL_PROFILE_MBATTERY)
             }
             Intent.ACTION_SCREEN_ON -> {
-                // Restore the profile that was active before screen off
                 val restored = prefs.getString(
                     PREF_PROFILE_BEFORE_SLEEP,
                     ThermalProfileFragment.THERMAL_PROFILE_DEFAULT.toString()

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Xiaomi সেটিংস</string>
+    <string name="thermalprofile_title">থার্মাল প্রোফাইল</string>
+    <string name="thermalprofile_default">ভারসাম্যপূর্ণ</string>
+    <string name="thermalprofile_performance">কর্মক্ষমতা</string>
+    <string name="thermalprofile_battery">ব্যাটারি সেভার</string>
+    <string name="thermalprofile_game">গেম</string>
+    <string name="thermalprofile_unknown">অজানা</string>
+    <string name="thermalprofile_auto_mode_title">অটো মোড সক্ষম করুন</string>
+    <string name="thermalprofile_auto_mode_summary">স্ক্রিন বন্ধ হলে স্বয়ংক্রিয়ভাবে ব্যাটারি সেভার মোডে স্যুইচ করুন এবং স্ক্রিন চালু হলে পূর্ববর্তী মোড পুনরুদ্ধার করুন।</string>
+    <string name="thermalprofile_auto_mode_note">নোট: উচ্চতর বুস্ট ফ্রিকোয়েন্সি (GPU 740MHz এর উপরে এবং CPU বুস্ট ফ্রিকোয়েন্সি) শুধুমাত্র গেম এবং কর্মক্ষমতা মোডে উপলব্ধ।</string>
+    <string name="thermalprofile_current_mode">বর্তমান মোড</string>
+    <string name="turbo_charge_title">চার্জিং টুলকিট</string>
+    <string name="turbo_enable_title">চার্জ স্পিড লিমিট সক্ষম করুন</string>
+    <string name="turbo_charge_summary">চার্জ স্পিড লিমিট এবং বাইপাস চার্জিং কনফিগার করুন</string>
+    <string name="turbo_charge_current_pref_title">চার্জিং ওয়াটেজ</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">বাইপাস চার্জিং</string>
+    <string name="bypass_charging_summary">তাপ এবং ব্যাটারি ক্ষয় কমাতে চার্জার থেকে সরাসরি ডিভাইসে বিদ্যুৎ দিন</string>
+    <string name="core_control_header">কোর নিয়ন্ত্রণ</string>
+    <string name="charging_header">চার্জিং টুলবক্স</string>
+    <string name="core_control_title">কোর নিয়ন্ত্রণ</string>
+    <string name="core_control_description">অ্যাডভান্সড CPU নিয়ন্ত্রণ। কোর বন্ধ করলে ব্যাটারি বা থার্মাল লোড কমতে পারে, তবে কর্মক্ষমতা এবং স্থিতিশীলতা প্রভাবিত হতে পারে।\n\nঅন্তত দুটি লিটল কোর সবসময় অনলাইন থাকতে হবে।</string>
+    <string name="core_control_min_little_warning">অন্তত ২টি লিটল কোর অনলাইন থাকতে হবে</string>
+    <string name="core_0">কোর 0 (লিটল)</string>
+    <string name="core_1">কোর 1 (লিটল)</string>
+    <string name="core_2">কোর 2 (লিটল)</string>
+    <string name="core_3">কোর 3 (লিটল)</string>
+    <string name="core_4">কোর 4 (বিগ)</string>
+    <string name="core_5">কোর 5 (বিগ)</string>
+    <string name="core_6">কোর 6 (বিগ)</string>
+    <string name="core_7">কোর 7 (প্রাইম)</string>
+    <string name="app_summary">কর্মক্ষমতা, থার্মাল এবং চার্জিং নিয়ন্ত্রণ </string>
+    <string name="home_subtitle">কর্মক্ষমতা ও টিউনিং নিয়ন্ত্রণ</string>
+    <string name="nav_home">হোম</string>
+    <string name="nav_thermals">থার্মাল</string>
+    <string name="nav_charging">চার্জিং</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">থার্মাল প্রোফাইল</string>
+    <string name="home_card_charging_title">চার্জিং</string>
+    <string name="home_card_cores_title">কোর নিয়ন্ত্রণ</string>
+    <string name="home_card_perapp_title">প্রতি-অ্যাপ থার্মাল</string>
+    <string name="home_charging_on">টার্বো চালু</string>
+    <string name="home_charging_off">টার্বো বন্ধ</string>
+    <string name="home_bypass_on">বাইপাস চালু</string>
+    <string name="home_bypass_off">বাইপাস বন্ধ</string>
+    <string name="home_bypass_unavailable">বাইপাস অনুপলব্ধ</string>
+    <string name="home_cores_status">%2$d এর মধ্যে %1$d কোর অনলাইন</string>
+    <string name="home_tap_hint">খুলতে ট্যাপ করুন</string>
+    <string name="perapp_title">প্রতি-অ্যাপ থার্মাল প্রোফাইল</string>
+    <string name="perapp_status_on_summary">%1$d অ্যাপ কনফিগার করা হয়েছে</string>
+    <string name="perapp_status_off">বন্ধ</string>
+    <string name="perapp_enable_title">প্রতি-অ্যাপ প্রোফাইল সক্ষম করুন</string>
+    <string name="perapp_enable_summary">অ্যাপ অগ্রভাগে এলে স্বয়ংক্রিয়ভাবে নির্ধারিত থার্মাল প্রোফাইল প্রয়োগ করুন এবং ছেড়ে গেলে গ্লোবাল প্রোফাইল পুনরুদ্ধার করুন।</string>
+    <string name="perapp_search_hint">অ্যাপ অনুসন্ধান করুন</string>
+    <string name="perapp_default_chip">ডিফল্ট</string>
+    <string name="perapp_profile_system">সিস্টেম ডিফল্ট</string>
+    <string name="perapp_footer">প্রতি-অ্যাপ প্রোফাইল সক্ষম থাকলে, অ্যাপ পরিবর্তনের সাথে সাথে থার্মাল কনফিগ পরিবর্তিত হয়। গ্লোবাল প্রোফাইল অন্যান্য সমস্ত অ্যাপে প্রযোজ্য।</string>
+    <string name="perapp_loading">অ্যাপ লোড হচ্ছে\u2026</string>
+    <string name="perapp_back">পেছনে</string>
+</resources>

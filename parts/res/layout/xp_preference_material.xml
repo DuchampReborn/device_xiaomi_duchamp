@@ -12,7 +12,6 @@
     android:background="?android:attr/selectableItemBackground"
     android:clipToPadding="false">
 
-    <!-- Tonal icon container: 40dp circle, secondary container fill -->
     <FrameLayout
         android:id="@android:id/icon_frame"
         android:layout_width="@dimen/m3_pref_icon_chip"
@@ -29,7 +28,6 @@
             android:tint="@color/m3_on_secondary_container" />
     </FrameLayout>
 
-    <!-- Text column -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -59,7 +57,6 @@
             android:ellipsize="end" />
     </LinearLayout>
 
-    <!-- Trailing widget slot: pill switch / dropdown spinner -->
     <LinearLayout
         android:id="@android:id/widget_frame"
         android:layout_width="wrap_content"

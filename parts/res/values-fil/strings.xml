@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Mga Setting ng Xiaomi</string>
+    <string name="thermalprofile_title">Profile ng thermal</string>
+    <string name="thermalprofile_default">Balanced</string>
+    <string name="thermalprofile_performance">Performance</string>
+    <string name="thermalprofile_battery">Battery Saver</string>
+    <string name="thermalprofile_game">Laro</string>
+    <string name="thermalprofile_unknown">Hindi alam</string>
+    <string name="thermalprofile_auto_mode_title">I-enable ang Auto Mode</string>
+    <string name="thermalprofile_auto_mode_summary">Awtomatikong lumipat sa Battery Saver mode kapag nag-off ang screen at ibalik ang nakaraang mode kapag nag-on ang screen.</string>
+    <string name="thermalprofile_auto_mode_note">Tandaan: Ang mas mataas na Boost frequencies (GPU over 740MHz at CPU boost frequencies) ay available lamang sa Game at Performance mode.</string>
+    <string name="thermalprofile_current_mode">Kasalukuyang mode</string>
+    <string name="turbo_charge_title">Charging Toolkit</string>
+    <string name="turbo_enable_title">I-enable ang Charge Speed Limit</string>
+    <string name="turbo_charge_summary">I-configure ang Charge Speed Limit at Bypass Charging</string>
+    <string name="turbo_charge_current_pref_title">Charging wattage</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">Bypass Charging</string>
+    <string name="bypass_charging_summary">Direktang paganahin ang device mula sa charger para mabawasan ang init at pagkasira ng battery</string>
+    <string name="core_control_header">Core Control</string>
+    <string name="charging_header">Charging ToolBox</string>
+    <string name="core_control_title">Core Control</string>
+    <string name="core_control_description">Advanced na kontrol ng CPU. Ang pag-off ng cores ay maaaring makatipid sa battery o thermal load, ngunit maaaring makaapekto sa performance at stability.\n\nHindi bababa sa dalawang little cores ay dapat manatiling online sa lahat ng oras.</string>
+    <string name="core_control_min_little_warning">Hindi bababa sa 2 little cores ay dapat manatiling online</string>
+    <string name="core_0">Core 0 (Little)</string>
+    <string name="core_1">Core 1 (Little)</string>
+    <string name="core_2">Core 2 (Little)</string>
+    <string name="core_3">Core 3 (Little)</string>
+    <string name="core_4">Core 4 (Big)</string>
+    <string name="core_5">Core 5 (Big)</string>
+    <string name="core_6">Core 6 (Big)</string>
+    <string name="core_7">Core 7 (Prime)</string>
+    <string name="app_summary">Performance, Thermal at Charging Controls </string>
+    <string name="home_subtitle">Performance &amp; tuning controls</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_thermals">Thermals</string>
+    <string name="nav_charging">Charging</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">Thermal profile</string>
+    <string name="home_card_charging_title">Charging</string>
+    <string name="home_card_cores_title">Core control</string>
+    <string name="home_card_perapp_title">Per-app thermal</string>
+    <string name="home_charging_on">Turbo on</string>
+    <string name="home_charging_off">Turbo off</string>
+    <string name="home_bypass_on">Bypass on</string>
+    <string name="home_bypass_off">Bypass off</string>
+    <string name="home_bypass_unavailable">Bypass unavailable</string>
+    <string name="home_cores_status">%1$d ng %2$d cores online</string>
+    <string name="home_tap_hint">I-tap para buksan</string>
+    <string name="perapp_title">Mga thermal profile bawat app</string>
+    <string name="perapp_status_on_summary">%1$d apps ang naka-configure</string>
+    <string name="perapp_status_off">Off</string>
+    <string name="perapp_enable_title">I-enable ang per-app profiles</string>
+    <string name="perapp_enable_summary">Awtomatikong ilapat ang nakatalagang thermal profile kapag dumating ang app sa foreground at ibalik ang global profile kapag umalis ito.</string>
+    <string name="perapp_search_hint">Maghanap ng apps</string>
+    <string name="perapp_default_chip">Default</string>
+    <string name="perapp_profile_system">System default</string>
+    <string name="perapp_footer">Kapag naka-enable ang per-app profiles, nag-a-switch ang thermal config kapag nagpalit ka ng apps. Ang global profile ay nalalapat sa lahat ng iba pang apps.</string>
+    <string name="perapp_loading">Naglo-load ng apps\u2026</string>
+    <string name="perapp_back">Bumalik</string>
+</resources>

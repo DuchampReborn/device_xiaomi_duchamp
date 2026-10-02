@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Cilësimet Xiaomi</string>
+    <string name="thermalprofile_title">Profili termik</string>
+    <string name="thermalprofile_default">I ekuilibruar</string>
+    <string name="thermalprofile_performance">Performancë</string>
+    <string name="thermalprofile_battery">Kursyes baterie</string>
+    <string name="thermalprofile_game">Lojë</string>
+    <string name="thermalprofile_unknown">I panjohur</string>
+    <string name="thermalprofile_auto_mode_title">Aktivizo modalitetin auto</string>
+    <string name="thermalprofile_auto_mode_summary">Kalo automatikisht në modalitetin Kursyes baterie kur ekrani fiket dhe rivendos modalitetin e mëparshëm kur ekrani ndizet.</string>
+    <string name="thermalprofile_auto_mode_note">Shënim: Frekuencat më të larta Boost (GPU mbi 740MHz dhe frekuencat boost të CPU) janë të disponueshme vetëm në modalitetin Lojë dhe Performancë.</string>
+    <string name="thermalprofile_current_mode">Modaliteti aktual</string>
+    <string name="turbo_charge_title">Kutia e mjeteve e karikimit</string>
+    <string name="turbo_enable_title">Aktivizo kufirin e shpejtësisë së karikimit</string>
+    <string name="turbo_charge_summary">Konfiguro kufirin e shpejtësisë së karikimit dhe karikimin bypass</string>
+    <string name="turbo_charge_current_pref_title">Fuqia e karikimit</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">Karikim bypass</string>
+    <string name="bypass_charging_summary">Ushqe pajisjen direkt nga karikuesi për të reduktuar nxehtësinë dhe konsumin e baterisë</string>
+    <string name="core_control_header">Kontrolli i bërthamave</string>
+    <string name="charging_header">Kutia e mjeteve e karikimit</string>
+    <string name="core_control_title">Kontrolli i bërthamave</string>
+    <string name="core_control_description">Kontroll i avancuar i CPU. Fikja e bërthamave mund të kursejë baterinë ose ngarkesën termike, por mund të ndikojë në performancën dhe qëndrueshmërinë.\n\nTë paktën dy bërthama little duhet të mbeten aktive në çdo kohë.</string>
+    <string name="core_control_min_little_warning">Të paktën 2 bërthama little duhet të mbeten aktive</string>
+    <string name="core_0">Bërthama 0 (Little)</string>
+    <string name="core_1">Bërthama 1 (Little)</string>
+    <string name="core_2">Bërthama 2 (Little)</string>
+    <string name="core_3">Bërthama 3 (Little)</string>
+    <string name="core_4">Bërthama 4 (Big)</string>
+    <string name="core_5">Bërthama 5 (Big)</string>
+    <string name="core_6">Bërthama 6 (Big)</string>
+    <string name="core_7">Bërthama 7 (Prime)</string>
+    <string name="app_summary">Kontrollet e performancës, termikes dhe karikimit </string>
+    <string name="home_subtitle">Kontrollet e performancës dhe akordimit</string>
+    <string name="nav_home">Shtëpia</string>
+    <string name="nav_thermals">Termike</string>
+    <string name="nav_charging">Karikimi</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">Profili termik</string>
+    <string name="home_card_charging_title">Karikimi</string>
+    <string name="home_card_cores_title">Kontrolli i bërthamave</string>
+    <string name="home_card_perapp_title">Termike për aplikacion</string>
+    <string name="home_charging_on">Turbo aktiv</string>
+    <string name="home_charging_off">Turbo joaktiv</string>
+    <string name="home_bypass_on">Bypass aktiv</string>
+    <string name="home_bypass_off">Bypass joaktiv</string>
+    <string name="home_bypass_unavailable">Bypass i padisponueshëm</string>
+    <string name="home_cores_status">%1$d nga %2$d bërthama aktive</string>
+    <string name="home_tap_hint">Trokit për të hapur</string>
+    <string name="perapp_title">Profile termike për aplikacion</string>
+    <string name="perapp_status_on_summary">%1$d aplikacione të konfiguruara</string>
+    <string name="perapp_status_off">Joaktiv</string>
+    <string name="perapp_enable_title">Aktivizo profilet për aplikacion</string>
+    <string name="perapp_enable_summary">Apliko automatikisht profilin termik të caktuar kur një aplikacion vjen në plan të parë dhe rivendos profilin global kur largohet.</string>
+    <string name="perapp_search_hint">Kërko aplikacione</string>
+    <string name="perapp_default_chip">Parazgjedhur</string>
+    <string name="perapp_profile_system">Parazgjedhja e sistemit</string>
+    <string name="perapp_footer">Kur profilet për aplikacion janë aktivizuar, konfigurimi termik ndryshon kur ndërroni aplikacionet. Profili global zbatohet për të gjithë aplikacionet e tjera.</string>
+    <string name="perapp_loading">Po ngarkojnë aplikacionet\u2026</string>
+    <string name="perapp_back">Pas</string>
+</resources>
