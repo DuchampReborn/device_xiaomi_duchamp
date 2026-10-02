@@ -12,21 +12,12 @@ import android.content.SharedPreferences
 import android.os.IBinder
 import androidx.preference.PreferenceManager
 
-/**
- * Long-running service that registers ThermalAutoModeReceiver for
- * ACTION_SCREEN_OFF / ACTION_SCREEN_ON (these cannot be declared in the
- * manifest — they must be registered in code).
- *
- * Started by BootCompletedReceiver and also toggled by the Auto Mode switch
- * in ThermalProfileFragment.
- */
 class ThermalAutoModeService : Service() {
 
     private val mReceiver = ThermalAutoModeReceiver()
     private lateinit var mPrefs: SharedPreferences
     private val mPrefListener = SharedPreferences.OnSharedPreferenceChangeListener { prefs, key ->
         if (key == ThermalProfileFragment.PREF_AUTO_MODE) {
-            // If auto mode was just disabled, stop self
             if (!prefs.getBoolean(ThermalProfileFragment.PREF_AUTO_MODE, false)) {
                 stopSelf()
             }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Cài đặt Xiaomi</string>
+    <string name="thermalprofile_title">Hồ sơ nhiệt</string>
+    <string name="thermalprofile_default">Cân bằng</string>
+    <string name="thermalprofile_performance">Hiệu suất</string>
+    <string name="thermalprofile_battery">Tiết kiệm pin</string>
+    <string name="thermalprofile_game">Trò chơi</string>
+    <string name="thermalprofile_unknown">Không xác định</string>
+    <string name="thermalprofile_auto_mode_title">Bật chế độ tự động</string>
+    <string name="thermalprofile_auto_mode_summary">Tự động chuyển sang chế độ Tiết kiệm pin khi tắt màn hình và khôi phục chế độ trước đó khi bật màn hình.</string>
+    <string name="thermalprofile_auto_mode_note">Lưu ý: Tần số Boost cao hơn (GPU trên 740MHz và tần số boost CPU) chỉ khả dụng ở chế độ Trò chơi và Hiệu suất.</string>
+    <string name="thermalprofile_current_mode">Chế độ hiện tại</string>
+    <string name="turbo_charge_title">Bộ công cụ sạc</string>
+    <string name="turbo_enable_title">Bật giới hạn tốc độ sạc</string>
+    <string name="turbo_charge_summary">Cấu hình giới hạn tốc độ sạc và sạc bypass</string>
+    <string name="turbo_charge_current_pref_title">Công suất sạc</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">Sạc bypass</string>
+    <string name="bypass_charging_summary">Cấp nguồn trực tiếp từ sạc cho thiết bị để giảm nhiệt và hao pin</string>
+    <string name="core_control_header">Điều khiển lõi</string>
+    <string name="charging_header">Bộ công cụ sạc</string>
+    <string name="core_control_title">Điều khiển lõi</string>
+    <string name="core_control_description">Điều khiển CPU nâng cao. Tắt lõi có thể tiết kiệm pin hoặc tải nhiệt, nhưng có thể ảnh hưởng đến hiệu suất và độ ổn định.\n\nÍt nhất hai lõi nhỏ phải luôn trực tuyến.</string>
+    <string name="core_control_min_little_warning">Ít nhất 2 lõi nhỏ phải luôn trực tuyến</string>
+    <string name="core_0">Lõi 0 (Nhỏ)</string>
+    <string name="core_1">Lõi 1 (Nhỏ)</string>
+    <string name="core_2">Lõi 2 (Nhỏ)</string>
+    <string name="core_3">Lõi 3 (Nhỏ)</string>
+    <string name="core_4">Lõi 4 (Lớn)</string>
+    <string name="core_5">Lõi 5 (Lớn)</string>
+    <string name="core_6">Lõi 6 (Lớn)</string>
+    <string name="core_7">Lõi 7 (Prime)</string>
+    <string name="app_summary">Điều khiển hiệu suất, nhiệt và sạc </string>
+    <string name="home_subtitle">Điều khiển hiệu suất &amp; tinh chỉnh</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_thermals">Nhiệt</string>
+    <string name="nav_charging">Sạc</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">Hồ sơ nhiệt</string>
+    <string name="home_card_charging_title">Sạc</string>
+    <string name="home_card_cores_title">Điều khiển lõi</string>
+    <string name="home_card_perapp_title">Nhiệt theo ứng dụng</string>
+    <string name="home_charging_on">Turbo bật</string>
+    <string name="home_charging_off">Turbo tắt</string>
+    <string name="home_bypass_on">Bypass bật</string>
+    <string name="home_bypass_off">Bypass tắt</string>
+    <string name="home_bypass_unavailable">Bypass không khả dụng</string>
+    <string name="home_cores_status">%1$d trong số %2$d lõi trực tuyến</string>
+    <string name="home_tap_hint">Nhấn để mở</string>
+    <string name="perapp_title">Hồ sơ nhiệt theo ứng dụng</string>
+    <string name="perapp_status_on_summary">Đã cấu hình %1$d ứng dụng</string>
+    <string name="perapp_status_off">Tắt</string>
+    <string name="perapp_enable_title">Bật hồ sơ theo ứng dụng</string>
+    <string name="perapp_enable_summary">Tự động áp dụng hồ sơ nhiệt được gán khi ứng dụng chuyển lên nền trước và khôi phục hồ sơ toàn cục khi rời đi.</string>
+    <string name="perapp_search_hint">Tìm kiếm ứng dụng</string>
+    <string name="perapp_default_chip">Mặc định</string>
+    <string name="perapp_profile_system">Mặc định hệ thống</string>
+    <string name="perapp_footer">Khi hồ sơ theo ứng dụng được bật, cấu hình nhiệt thay đổi khi bạn chuyển ứng dụng. Hồ sơ toàn cục áp dụng cho mọi ứng dụng khác.</string>
+    <string name="perapp_loading">Đang tải ứng dụng\u2026</string>
+    <string name="perapp_back">Quay lại</string>
+</resources>

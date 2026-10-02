@@ -1,24 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: The LineageOS Project
-     SPDX-License-Identifier: Apache-2.0
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaomi.settings"
-    android:versionCode="1"
-    android:versionName="1.0"
+    android:versionCode="2"
+    android:versionName="2.0"
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
 
     <application
         android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
         android:persistent="true"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true"
         android:theme="@style/Theme.SubSettingsBase.Expressive">
+
+        <activity
+            android:name=".PartsActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.XiaomiParts.Main">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage" />
+            <meta-data
+                android:name="com.android.settings.group_key"
+                android:value="top_level_personalize_category" />
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="-61" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_m3_speed" />
+            <meta-data
+                android:name="com.android.settings.icon_tintable"
+                android:value="true" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/app_summary" />
+        </activity>
+
+        <activity
+            android:name=".thermal.PerAppThermalActivity"
+            android:label="@string/perapp_title"
+            android:exported="false"
+            android:theme="@style/Theme.XiaomiParts.Main" />
+
+        <service
+            android:name=".thermal.PerAppProfileService"
+            android:exported="false" />
 
         <receiver
             android:name=".BootCompletedReceiver"
@@ -33,11 +75,9 @@
 
         <service
             android:name=".display.ColorService"
-            android:permission="ColorService">
-        </service>
+            android:permission="ColorService" />
 
-        <!-- Thermal Profiles tile service -->
-                <service
+        <service
             android:name=".thermal.ThermalProfileTileService"
             android:icon="@drawable/ic_thermal_tile"
             android:label="@string/thermalprofile_title"
@@ -54,23 +94,11 @@
                 android:value="com.xiaomi.settings.thermal.ThermalProfileActivity" />
         </service>
 
-        <!-- Thermal Profile settings page (Battery section) -->
         <activity
             android:name=".thermal.ThermalProfileActivity"
             android:label="@string/thermalprofile_title"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.battery" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/thermalprofile_summary" />
-        </activity>
+            android:exported="true" />
 
-        <!-- Thermal Auto Mode Service -->
         <service
             android:name=".thermal.ThermalAutoModeService"
             android:exported="false" />
@@ -85,27 +113,15 @@
             </intent-filter>
         </activity>
 
-        <!-- Turbo Charging -->
         <activity
             android:name=".turbocharging.TurboChargingActivity"
             android:exported="false"
             android:label="@string/turbo_charge_title"
-            android:theme="@style/Theme.SubSettingsBase">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.battery" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/turbo_charge_summary" />
-        </activity>
+            android:theme="@style/Theme.SubSettingsBase" />
 
         <service
             android:name=".turbocharging.TurboChargingService"
-            android:permission="TurboChargingService">
-        </service>
+            android:permission="TurboChargingService" />
 
         <service
             android:name=".turbocharging.BypassChargingTileService"
@@ -121,20 +137,5 @@
                 android:value="false" />
         </service>
 
-        <!-- Core Control -->
-        <activity
-            android:name=".corecontrol.CoreControlActivity"
-            android:label="@string/core_control_title"
-            android:exported="true">
-            <intent-filter>
-               <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-               android:name="com.android.settings.category"
-               android:value="com.android.settings.category.ia.battery" />
-            <meta-data
-               android:name="com.android.settings.summary"
-               android:resource="@string/core_control_summary" />
-        </activity>        
     </application>
 </manifest>

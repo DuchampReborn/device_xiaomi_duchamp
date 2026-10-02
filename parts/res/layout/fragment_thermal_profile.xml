@@ -16,7 +16,6 @@
         android:paddingTop="@dimen/m3_space_l"
         android:paddingBottom="@dimen/m3_space_xxl">
 
-        <!--  Hero card -->
         <FrameLayout
             android:id="@+id/card_current_mode"
             android:layout_width="match_parent"
@@ -58,7 +57,6 @@
 
                 </LinearLayout>
 
-                <!-- Icon chip -->
                 <FrameLayout
                     android:id="@+id/icon_chip"
                     android:layout_width="@dimen/m3_icon_chip_size"
@@ -80,14 +78,12 @@
 
         </FrameLayout>
 
-        <!-- Mode selector -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="@dimen/m3_space_xl">
 
-            <!-- Balanced -->
             <FrameLayout
                 android:id="@+id/card_default"
                 android:layout_width="0dp"
@@ -139,7 +135,6 @@
                 android:layout_width="@dimen/m3_space_m"
                 android:layout_height="1dp" />
 
-            <!-- Performance -->
             <FrameLayout
                 android:id="@+id/card_performance"
                 android:layout_width="0dp"
@@ -195,7 +190,6 @@
             android:orientation="horizontal"
             android:layout_marginTop="@dimen/m3_space_m">
 
-            <!-- Battery Saver -->
             <FrameLayout
                 android:id="@+id/card_battery"
                 android:layout_width="0dp"
@@ -366,6 +360,62 @@
                 android:text="@string/thermalprofile_auto_mode_note" />
 
         </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/card_per_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m3_space_xl"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/m3_card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/m3_space_xl">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.Title"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:text="@string/perapp_title" />
+
+                    <TextView
+                        android:id="@+id/tv_per_app_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="@style/TextAppearance.XiaomiParts.BodySecondary"
+                        android:text="@string/perapp_status_off" />
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/switch_per_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m3_space_m" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="@dimen/m3_space_m"
+                    android:src="@drawable/ic_m3_chevron"
+                    android:importantForAccessibility="no" />
+
+            </LinearLayout>
+
+        </FrameLayout>
 
     </LinearLayout>
 </ScrollView>

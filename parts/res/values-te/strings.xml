@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Xiaomi సెట్టింగ్‌లు</string>
+    <string name="thermalprofile_title">థర్మల్ ప్రొఫైల్</string>
+    <string name="thermalprofile_default">సమతుల్య</string>
+    <string name="thermalprofile_performance">పనితీరు</string>
+    <string name="thermalprofile_battery">బ్యాటరీ సేవర్</string>
+    <string name="thermalprofile_game">గేమ్</string>
+    <string name="thermalprofile_unknown">తెలియదు</string>
+    <string name="thermalprofile_auto_mode_title">ఆటో మోడ్‌ను ప్రారంభించండి</string>
+    <string name="thermalprofile_auto_mode_summary">స్క్రీన్ ఆఫ్ అయినప్పుడు స్వయంచాలకంగా బ్యాటరీ సేవర్ మోడ్‌కి మారండి మరియు స్క్రీన్ ఆన్ అయినప్పుడు మునుపటి మోడ్‌ను పునరుద్ధరించండి.</string>
+    <string name="thermalprofile_auto_mode_note">గమనిక: అధిక బూస్ట్ ఫ్రీక్వెన్సీలు (GPU 740MHz పైన మరియు CPU బూస్ట్ ఫ్రీక్వెన్సీలు) గేమ్ మరియు పనితీరు మోడ్‌లలో మాత్రమే అందుబాటులో ఉన్నాయి.</string>
+    <string name="thermalprofile_current_mode">ప్రస్తుత మోడ్</string>
+    <string name="turbo_charge_title">ఛార్జింగ్ టూల్‌కిట్</string>
+    <string name="turbo_enable_title">ఛార్జ్ స్పీడ్ లిమిట్‌ను ప్రారంభించండి</string>
+    <string name="turbo_charge_summary">ఛార్జ్ స్పీడ్ లిమిట్ మరియు బైపాస్ ఛార్జింగ్‌ను కాన్ఫిగర్ చేయండి</string>
+    <string name="turbo_charge_current_pref_title">ఛార్జింగ్ వాటేజ్</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">బైపాస్ ఛార్జింగ్</string>
+    <string name="bypass_charging_summary">వేడి మరియు బ్యాటరీ ధారణ తగ్గించడానికి పరికరానికి నేరుగా ఛార్జర్ నుండి శక్తిని అందించండి</string>
+    <string name="core_control_header">కోర్ నియంత్రణ</string>
+    <string name="charging_header">ఛార్జింగ్ టూల్‌బాక్స్</string>
+    <string name="core_control_title">కోర్ నియంత్రణ</string>
+    <string name="core_control_description">అధునాతన CPU నియంత్రణ. కోర్‌లను ఆఫ్ చేయడం వల్ల బ్యాటరీ లేదా థర్మల్ లోడ్ ఆదా అవ్వొచ్చు, కానీ పనితీరు మరియు స్థిరత్వాన్ని ప్రభావితం చేయవచ్చు.\n\nకనీసం రెండు లిటిల్ కోర్‌లు ఎల్లప్పుడూ ఆన్‌లైన్‌లో ఉండాలి.</string>
+    <string name="core_control_min_little_warning">కనీసం 2 లిటిల్ కోర్‌లు ఆన్‌లైన్‌లో ఉండాలి</string>
+    <string name="core_0">కోర్ 0 (లిటిల్)</string>
+    <string name="core_1">కోర్ 1 (లిటిల్)</string>
+    <string name="core_2">కోర్ 2 (లిటిల్)</string>
+    <string name="core_3">కోర్ 3 (లిటిల్)</string>
+    <string name="core_4">కోర్ 4 (బిగ్)</string>
+    <string name="core_5">కోర్ 5 (బిగ్)</string>
+    <string name="core_6">కోర్ 6 (బిగ్)</string>
+    <string name="core_7">కోర్ 7 (ప్రైమ్)</string>
+    <string name="app_summary">పనితీరు, థర్మల్ మరియు ఛార్జింగ్ నియంత్రణలు </string>
+    <string name="home_subtitle">పనితీరు &amp; ట్యూనింగ్ నియంత్రణలు</string>
+    <string name="nav_home">హోమ్</string>
+    <string name="nav_thermals">థర్మల్స్</string>
+    <string name="nav_charging">ఛార్జింగ్</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">థర్మల్ ప్రొఫైల్</string>
+    <string name="home_card_charging_title">ఛార్జింగ్</string>
+    <string name="home_card_cores_title">కోర్ నియంత్రణ</string>
+    <string name="home_card_perapp_title">యాప్-స్పెసిఫిక్ థర్మల్</string>
+    <string name="home_charging_on">టర్బో ఆన్</string>
+    <string name="home_charging_off">టర్బో ఆఫ్</string>
+    <string name="home_bypass_on">బైపాస్ ఆన్</string>
+    <string name="home_bypass_off">బైపాస్ ఆఫ్</string>
+    <string name="home_bypass_unavailable">బైపాస్ అందుబాటులో లేదు</string>
+    <string name="home_cores_status">%2$d లో %1$d కోర్‌లు ఆన్‌లైన్‌లో</string>
+    <string name="home_tap_hint">తెరవడానికి ట్యాప్ చేయండి</string>
+    <string name="perapp_title">యాప్-స్పెసిఫిక్ థర్మల్ ప్రొఫైల్‌లు</string>
+    <string name="perapp_status_on_summary">%1$d యాప్‌లు కాన్ఫిగర్ చేయబడ్డాయి</string>
+    <string name="perapp_status_off">ఆఫ్</string>
+    <string name="perapp_enable_title">యాప్-స్పెసిఫిక్ ప్రొఫైల్‌లను ప్రారంభించండి</string>
+    <string name="perapp_enable_summary">యాప్ ముందుకు వచ్చినప్పుడు కేటాయించిన థర్మల్ ప్రొఫైల్‌ను స్వయంచాలకంగా వర్తింపజేయండి మరియు వదిలివేసినప్పుడు గ్లోబల్ ప్రొఫైల్‌ను పునరుద్ధరించండి.</string>
+    <string name="perapp_search_hint">యాప్‌లను శోధించండి</string>
+    <string name="perapp_default_chip">డిఫాల్ట్</string>
+    <string name="perapp_profile_system">సిస్టమ్ డిఫాల్ట్</string>
+    <string name="perapp_footer">యాప్-స్పెసిఫిక్ ప్రొఫైల్‌లు ప్రారంభించబడినప్పుడు, యాప్‌లను మార్చినప్పుడు థర్మల్ కాన్ఫిగ్ మారుతుంది. గ్లోబల్ ప్రొఫైల్ అన్ని ఇతర యాప్‌లకు వర్తిస్తుంది.</string>
+    <string name="perapp_loading">యాప్‌లను లోడ్ చేస్తోంది\u2026</string>
+    <string name="perapp_back">వెనుకకు</string>
+</resources>

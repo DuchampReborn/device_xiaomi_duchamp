@@ -30,15 +30,8 @@ public final class FileUtils {
     private static final String TAG = "FileUtils";
 
     private FileUtils() {
-        // This class is not supposed to be instantiated
     }
 
-    /**
-     * Reads the first line of text from the given file.
-     * Reference {@link BufferedReader#readLine()} for clarification on what a line is
-     *
-     * @return the read line contents, or null on failure
-     */
     public static String readOneLine(String fileName) {
         String line = null;
         BufferedReader reader = null;
@@ -56,18 +49,12 @@ public final class FileUtils {
                     reader.close();
                 }
             } catch (IOException e) {
-                // Ignored, not much we can do anyway
             }
         }
 
         return line;
     }
 
-    /**
-     * Writes the given value into the given file
-     *
-     * @return true on success, false on failure
-     */
     public static boolean writeLine(String fileName, String value) {
         BufferedWriter writer = null;
 
@@ -86,48 +73,27 @@ public final class FileUtils {
                     writer.close();
                 }
             } catch (IOException e) {
-                // Ignored, not much we can do anyway
             }
         }
 
         return true;
     }
 
-    /**
-     * Checks whether the given file exists
-     *
-     * @return true if exists, false if not
-     */
     public static boolean fileExists(String fileName) {
         final File file = new File(fileName);
         return file.exists();
     }
 
-    /**
-     * Checks whether the given file is readable
-     *
-     * @return true if readable, false if not
-     */
     public static boolean isFileReadable(String fileName) {
         final File file = new File(fileName);
         return file.exists() && file.canRead();
     }
 
-    /**
-     * Checks whether the given file is writable
-     *
-     * @return true if writable, false if not
-     */
     public static boolean isFileWritable(String fileName) {
         final File file = new File(fileName);
         return file.exists() && file.canWrite();
     }
 
-    /**
-     * Deletes an existing file
-     *
-     * @return true if the delete was successful, false if not
-     */
     public static boolean delete(String fileName) {
         final File file = new File(fileName);
         boolean ok = false;
@@ -139,11 +105,6 @@ public final class FileUtils {
         return ok;
     }
 
-    /**
-     * Renames an existing file
-     *
-     * @return true if the rename was successful, false if not
-     */
     public static boolean rename(String srcPath, String dstPath) {
         final File srcFile = new File(srcPath);
         final File dstFile = new File(dstPath);
@@ -162,11 +123,6 @@ public final class FileUtils {
         writeLine(fileName, Integer.toString(value));
     }
 
-    /**
-     * Reads the first line of a file and returns it as an int (strips "0x" if present).
-     *
-     * @return the parsed int value, or 0 if conversion fails
-     */
     public static int readLineInt(String fileName) {
         try {
             String line = readOneLine(fileName);

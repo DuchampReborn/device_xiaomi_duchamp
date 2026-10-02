@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">小米部件</string>
+    <string name="app_title">小米设置</string>
+    <string name="thermalprofile_title">温控模式</string>
+    <string name="thermalprofile_default">均衡</string>
+    <string name="thermalprofile_performance">性能</string>
+    <string name="thermalprofile_battery">省电</string>
+    <string name="thermalprofile_game">游戏</string>
+    <string name="thermalprofile_unknown">未知</string>
+    <string name="thermalprofile_auto_mode_title">启用自动模式</string>
+    <string name="thermalprofile_auto_mode_summary">屏幕关闭时自动切换到省电模式,屏幕开启时恢复之前的模式。</string>
+    <string name="thermalprofile_auto_mode_note">注意:更高的 Boost 频率(GPU 超过 740MHz 和 CPU boost 频率)仅在游戏和性能模式下可用。</string>
+    <string name="thermalprofile_current_mode">当前模式</string>
+    <string name="turbo_charge_title">充电工具箱</string>
+    <string name="turbo_enable_title">启用充电限速</string>
+    <string name="turbo_charge_summary">配置充电限速和旁路充电</string>
+    <string name="turbo_charge_current_pref_title">充电功率</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">旁路充电</string>
+    <string name="bypass_charging_summary">直接由充电器为设备供电,以减少发热和电池损耗</string>
+    <string name="core_control_header">核心控制</string>
+    <string name="charging_header">充电工具箱</string>
+    <string name="core_control_title">核心控制</string>
+    <string name="core_control_description">高级 CPU 控制。关闭核心可降低电池消耗或温升,但可能影响性能和稳定性。\n\n至少需保持两个小核心在线。</string>
+    <string name="core_control_min_little_warning">至少需保持 2 个小核心在线</string>
+    <string name="core_0">核心 0 (小)</string>
+    <string name="core_1">核心 1 (小)</string>
+    <string name="core_2">核心 2 (小)</string>
+    <string name="core_3">核心 3 (小)</string>
+    <string name="core_4">核心 4 (大)</string>
+    <string name="core_5">核心 5 (大)</string>
+    <string name="core_6">核心 6 (大)</string>
+    <string name="core_7">核心 7 (Prime)</string>
+    <string name="app_summary">性能、温控和充电控制 </string>
+    <string name="home_subtitle">性能与调节控制</string>
+    <string name="nav_home">主页</string>
+    <string name="nav_thermals">温控</string>
+    <string name="nav_charging">充电</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">温控模式</string>
+    <string name="home_card_charging_title">充电</string>
+    <string name="home_card_cores_title">核心控制</string>
+    <string name="home_card_perapp_title">逐应用温控</string>
+    <string name="home_charging_on">Turbo 开</string>
+    <string name="home_charging_off">Turbo 关</string>
+    <string name="home_bypass_on">旁路开</string>
+    <string name="home_bypass_off">旁路关</string>
+    <string name="home_bypass_unavailable">旁路不可用</string>
+    <string name="home_cores_status">%2$d 个核心中 %1$d 个在线</string>
+    <string name="home_tap_hint">点击打开</string>
+    <string name="perapp_title">逐应用温控模式</string>
+    <string name="perapp_status_on_summary">已配置 %1$d 个应用</string>
+    <string name="perapp_status_off">关</string>
+    <string name="perapp_enable_title">启用逐应用模式</string>
+    <string name="perapp_enable_summary">应用进入前台时自动应用已分配的温控模式,离开时恢复全局模式。</string>
+    <string name="perapp_search_hint">搜索应用</string>
+    <string name="perapp_default_chip">默认</string>
+    <string name="perapp_profile_system">系统默认</string>
+    <string name="perapp_footer">启用逐应用模式后,切换应用时温控配置会随之切换。全局模式适用于其他所有应用。</string>
+    <string name="perapp_loading">正在加载应用\u2026</string>
+    <string name="perapp_back">返回</string>
+</resources>

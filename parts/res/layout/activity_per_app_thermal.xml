@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-License-Identifier: Apache-2.0
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/perapp_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:id="@+id/perapp_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/m3_space_m"
+        android:paddingEnd="@dimen/m3_space_l"
+        android:paddingTop="@dimen/m3_space_m"
+        android:paddingBottom="@dimen/m3_space_m">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/m3_icon_button_size"
+            android:layout_height="@dimen/m3_icon_button_size"
+            android:padding="10dp"
+            android:src="@drawable/ic_m3_back"
+            android:background="@drawable/m3_icon_button_circle"
+            android:contentDescription="@string/perapp_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/m3_space_m"
+            android:text="@string/perapp_title"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="?android:attr/textColorPrimary"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/perapp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

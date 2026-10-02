@@ -43,10 +43,6 @@ class ThermalProfileTileService : TileService() {
         tile.updateTile()
     }
 
-    /**
-     * Write the profile to sysfs and persist it in SharedPreferences so the
-     * ThermalProfileFragment (settings page) reflects the change.
-     */
     private fun applyProfile(profile: Int) {
         FileUtils.writeLine(THEMRAL_PROFILE_PATH, profile)
         PreferenceManager.getDefaultSharedPreferences(this)
@@ -57,9 +53,7 @@ class ThermalProfileTileService : TileService() {
 
     override fun onStartListening() {
         super.onStartListening()
-        // Always read the live sysfs value as the single source of truth.
         val current = FileUtils.readLineInt(THEMRAL_PROFILE_PATH)
-        // Keep SharedPreferences in sync so the page is accurate when opened.
         PreferenceManager.getDefaultSharedPreferences(this)
             .edit()
             .putString(ThermalProfileFragment.PREF_THERMAL_PROFILE, current.toString())

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Configurações Xiaomi</string>
+    <string name="thermalprofile_title">Perfil térmico</string>
+    <string name="thermalprofile_default">Equilibrado</string>
+    <string name="thermalprofile_performance">Desempenho</string>
+    <string name="thermalprofile_battery">Economia de bateria</string>
+    <string name="thermalprofile_game">Jogo</string>
+    <string name="thermalprofile_unknown">Desconhecido</string>
+    <string name="thermalprofile_auto_mode_title">Ativar modo automático</string>
+    <string name="thermalprofile_auto_mode_summary">Mudar automaticamente para o modo Economia de bateria quando a tela desligar e restaurar o modo anterior quando ligar.</string>
+    <string name="thermalprofile_auto_mode_note">Nota: Frequências Boost mais altas (GPU acima de 740MHz e frequências boost de CPU) estão disponíveis apenas nos modos Jogo e Desempenho.</string>
+    <string name="thermalprofile_current_mode">Modo atual</string>
+    <string name="turbo_charge_title">Kit de carregamento</string>
+    <string name="turbo_enable_title">Ativar limite de velocidade de carga</string>
+    <string name="turbo_charge_summary">Configurar limite de velocidade de carga e carregamento bypass</string>
+    <string name="turbo_charge_current_pref_title">Potência de carregamento</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">Carregamento bypass</string>
+    <string name="bypass_charging_summary">Alimentar o dispositivo diretamente do carregador para reduzir calor e desgaste da bateria</string>
+    <string name="core_control_header">Controle de núcleos</string>
+    <string name="charging_header">Kit de carregamento</string>
+    <string name="core_control_title">Controle de núcleos</string>
+    <string name="core_control_description">Controle avançado de CPU. Desligar núcleos pode economizar bateria ou carga térmica, mas pode afetar o desempenho e a estabilidade.\n\nPelo menos dois núcleos little devem permanecer ativos o tempo todo.</string>
+    <string name="core_control_min_little_warning">Pelo menos 2 núcleos little devem permanecer ativos</string>
+    <string name="core_0">Núcleo 0 (Little)</string>
+    <string name="core_1">Núcleo 1 (Little)</string>
+    <string name="core_2">Núcleo 2 (Little)</string>
+    <string name="core_3">Núcleo 3 (Little)</string>
+    <string name="core_4">Núcleo 4 (Big)</string>
+    <string name="core_5">Núcleo 5 (Big)</string>
+    <string name="core_6">Núcleo 6 (Big)</string>
+    <string name="core_7">Núcleo 7 (Prime)</string>
+    <string name="app_summary">Controles de desempenho, térmico e carregamento </string>
+    <string name="home_subtitle">Controles de desempenho e ajuste</string>
+    <string name="nav_home">Início</string>
+    <string name="nav_thermals">Térmicos</string>
+    <string name="nav_charging">Carregamento</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">Perfil térmico</string>
+    <string name="home_card_charging_title">Carregamento</string>
+    <string name="home_card_cores_title">Controle de núcleos</string>
+    <string name="home_card_perapp_title">Térmico por aplicativo</string>
+    <string name="home_charging_on">Turbo ligado</string>
+    <string name="home_charging_off">Turbo desligado</string>
+    <string name="home_bypass_on">Bypass ligado</string>
+    <string name="home_bypass_off">Bypass desligado</string>
+    <string name="home_bypass_unavailable">Bypass indisponível</string>
+    <string name="home_cores_status">%1$d de %2$d núcleos ativos</string>
+    <string name="home_tap_hint">Toque para abrir</string>
+    <string name="perapp_title">Perfis térmicos por aplicativo</string>
+    <string name="perapp_status_on_summary">%1$d aplicativos configurados</string>
+    <string name="perapp_status_off">Desligado</string>
+    <string name="perapp_enable_title">Ativar perfis por aplicativo</string>
+    <string name="perapp_enable_summary">Aplicar automaticamente o perfil térmico atribuído quando um aplicativo vem para o primeiro plano e restaurar o perfil global ao sair.</string>
+    <string name="perapp_search_hint">Pesquisar aplicativos</string>
+    <string name="perapp_default_chip">Padrão</string>
+    <string name="perapp_profile_system">Padrão do sistema</string>
+    <string name="perapp_footer">Quando os perfis por aplicativo estão ativados, a configuração térmica muda conforme você alterna entre aplicativos. O perfil global se aplica a todos os outros aplicativos.</string>
+    <string name="perapp_loading">Carregando aplicativos\u2026</string>
+    <string name="perapp_back">Voltar</string>
+</resources>

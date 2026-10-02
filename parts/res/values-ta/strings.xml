@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Xiaomi அமைப்புகள்</string>
+    <string name="thermalprofile_title">வெப்ப சுயவிவரம்</string>
+    <string name="thermalprofile_default">சமநிலை</string>
+    <string name="thermalprofile_performance">செயல்திறன்</string>
+    <string name="thermalprofile_battery">பேட்டரி சேமிப்பு</string>
+    <string name="thermalprofile_game">விளையாட்டு</string>
+    <string name="thermalprofile_unknown">தெரியவில்லை</string>
+    <string name="thermalprofile_auto_mode_title">தானியங்கி முறையை இயக்கு</string>
+    <string name="thermalprofile_auto_mode_summary">திரை அணைக்கப்படும்போது தானாகவே பேட்டரி சேமிப்பு முறைக்கு மாறி, திரை இயக்கப்படும்போது முந்தைய முறையை மீட்டெடுக்கவும்.</string>
+    <string name="thermalprofile_auto_mode_note">குறிப்பு: உயர் பூஸ்ட் அதிர்வெண்கள் (GPU 740MHz க்கு மேல் மற்றும் CPU பூஸ்ட் அதிர்வெண்கள்) விளையாட்டு மற்றும் செயல்திறன் முறையில் மட்டுமே கிடைக்கின்றன.</string>
+    <string name="thermalprofile_current_mode">தற்போதைய முறை</string>
+    <string name="turbo_charge_title">சார்ஜிங் கருவித்தொகுப்பு</string>
+    <string name="turbo_enable_title">சார்ஜ் வேக வரம்பை இயக்கு</string>
+    <string name="turbo_charge_summary">சார்ஜ் வேக வரம்பு மற்றும் பைபாஸ் சார்ஜிங்கை உள்ளமைக்கவும்</string>
+    <string name="turbo_charge_current_pref_title">சார்ஜிங் வாட்ஸ்</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">பைபாஸ் சார்ஜிங்</string>
+    <string name="bypass_charging_summary">வெப்பம் மற்றும் பேட்டரி அரிப்பைக் குறைக்க சார்ஜரிலிருந்து நேரடியாக சாதனத்திற்கு மின்சாரம் வழங்கவும்</string>
+    <string name="core_control_header">கோர் கட்டுப்பாடு</string>
+    <string name="charging_header">சார்ஜிங் கருவித்தொகுப்பு</string>
+    <string name="core_control_title">கோர் கட்டுப்பாடு</string>
+    <string name="core_control_description">மேம்பட்ட CPU கட்டுப்பாடு. கோர்களை அணைப்பது பேட்டரி அல்லது வெப்ப சுமையை மிச்சப்படுத்தலாம், ஆனால் செயல்திறன் மற்றும் நிலைத்தன்மையை பாதிக்கலாம்.\n\nகுறைந்தது இரண்டு சிறிய கோர்கள் எப்போதும் இணைப்பில் இருக்க வேண்டும்.</string>
+    <string name="core_control_min_little_warning">குறைந்தது 2 சிறிய கோர்கள் இணைப்பில் இருக்க வேண்டும்</string>
+    <string name="core_0">கோர் 0 (சிறியது)</string>
+    <string name="core_1">கோர் 1 (சிறியது)</string>
+    <string name="core_2">கோர் 2 (சிறியது)</string>
+    <string name="core_3">கோர் 3 (சிறியது)</string>
+    <string name="core_4">கோர் 4 (பெரியது)</string>
+    <string name="core_5">கோர் 5 (பெரியது)</string>
+    <string name="core_6">கோர் 6 (பெரியது)</string>
+    <string name="core_7">கோர் 7 (முதன்மை)</string>
+    <string name="app_summary">செயல்திறன், வெப்ப மற்றும் சார்ஜிங் கட்டுப்பாடுகள் </string>
+    <string name="home_subtitle">செயல்திறன் &amp; டியூனிங் கட்டுப்பாடுகள்</string>
+    <string name="nav_home">முகப்பு</string>
+    <string name="nav_thermals">வெப்பங்கள்</string>
+    <string name="nav_charging">சார்ஜிங்</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">வெப்ப சுயவிவரம்</string>
+    <string name="home_card_charging_title">சார்ஜிங்</string>
+    <string name="home_card_cores_title">கோர் கட்டுப்பாடு</string>
+    <string name="home_card_perapp_title">செயலி வெப்பம்</string>
+    <string name="home_charging_on">டர்போ இயக்கு</string>
+    <string name="home_charging_off">டர்போ முடக்கு</string>
+    <string name="home_bypass_on">பைபாஸ் இயக்கு</string>
+    <string name="home_bypass_off">பைபாஸ் முடக்கு</string>
+    <string name="home_bypass_unavailable">பைபாஸ் கிடைக்கவில்லை</string>
+    <string name="home_cores_status">%2$d இல் %1$d கோர்கள் இணைப்பில்</string>
+    <string name="home_tap_hint">திறக்க தட்டவும்</string>
+    <string name="perapp_title">செயலி வெப்ப சுயவிவரங்கள்</string>
+    <string name="perapp_status_on_summary">%1$d செயலிகள் உள்ளமைக்கப்பட்டன</string>
+    <string name="perapp_status_off">முடக்கு</string>
+    <string name="perapp_enable_title">செயலி சுயவிவரங்களை இயக்கு</string>
+    <string name="perapp_enable_summary">ஒரு செயலி முன்னணிக்கு வரும்போது ஒதுக்கப்பட்ட வெப்ப சுயவிவரத்தை தானாகப் பயன்படுத்து மற்றும் விட்டுச்செல்லும்போது உலகளாவிய சுயவிவரத்தை மீட்டெடுக்கவும்.</string>
+    <string name="perapp_search_hint">செயலிகளைத் தேடவும்</string>
+    <string name="perapp_default_chip">இயல்புநிலை</string>
+    <string name="perapp_profile_system">கணினி இயல்புநிலை</string>
+    <string name="perapp_footer">செயலி சுயவிவரங்கள் இயக்கப்பட்டிருக்கும்போது, செயலிகளை மாற்றும்போது வெப்ப உள்ளமைவு மாறுகிறது. உலகளாவிய சுயவிவரம் மற்ற அனைத்து செயலிகளுக்கும் பொருந்தும்.</string>
+    <string name="perapp_loading">செயலிகள் ஏற்றப்படுகின்றன\u2026</string>
+    <string name="perapp_back">பின்செல்</string>
+</resources>

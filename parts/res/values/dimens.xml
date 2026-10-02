@@ -2,7 +2,6 @@
 
 <resources>
 
-    <dimen name="m3_space_xs">4dp</dimen>
     <dimen name="m3_space_s">8dp</dimen>
     <dimen name="m3_space_m">12dp</dimen>
     <dimen name="m3_space_l">16dp</dimen>
@@ -11,12 +10,6 @@
 
     <dimen name="m3_corner_card">24dp</dimen>
     <dimen name="m3_corner_hero">28dp</dimen>
-    <dimen name="m3_corner_chip">999dp</dimen>
-    <dimen name="m3_corner_icon_chip">32dp</dimen>
-
-    <dimen name="m3_switch_track_width">52dp</dimen>
-    <dimen name="m3_switch_track_height">32dp</dimen>
-    <dimen name="m3_switch_thumb_size">24dp</dimen>
     <dimen name="m3_icon_chip_size">64dp</dimen>
     <dimen name="m3_mode_card_height">76dp</dimen>
 
@@ -28,12 +21,31 @@
     <dimen name="m3_pref_category_padding_bottom">8dp</dimen>
 
     <dimen name="m3_icon_button_size">40dp</dimen>
-    <dimen name="m3_icon_button_glyph">20dp</dimen>
 
     <dimen name="m3_slider_track_height">12dp</dimen>
     <dimen name="m3_slider_track_radius">6dp</dimen>
     <dimen name="m3_slider_thumb_width">6dp</dimen>
     <dimen name="m3_slider_thumb_height">36dp</dimen>
     <dimen name="m3_slider_thumb_radius">3dp</dimen>
+
+    <dimen name="header_title_size">36sp</dimen>
+    <dimen name="nav_pill_margin_h">20dp</dimen>
+    <dimen name="nav_pill_margin_bottom">14dp</dimen>
+    <dimen name="nav_pill_padding_h">10dp</dimen>
+    <dimen name="nav_pill_padding_v">8dp</dimen>
+    <dimen name="nav_pill_elevation">10dp</dimen>
+    <dimen name="nav_pill_radius">34dp</dimen>
+    <dimen name="nav_item_height">46dp</dimen>
+    <dimen name="nav_item_radius">23dp</dimen>
+    <dimen name="nav_item_gap">4dp</dimen>
+    <dimen name="nav_icon_size">22dp</dimen>
+    <dimen name="nav_label_margin_start">6dp</dimen>
+    <dimen name="nav_label_text_size">12sp</dimen>
+    <dimen name="nav_content_padding_h">12dp</dimen>
+
+    <dimen name="home_card_min_height">128dp</dimen>
+    <dimen name="home_icon_chip">38dp</dimen>
+
+    <dimen name="perapp_search_height">46dp</dimen>
 
 </resources>

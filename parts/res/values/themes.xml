@@ -21,10 +21,23 @@
         <item name="android:colorControlNormal">@color/m3_on_surface_variant</item>
 
         <item name="preferenceTheme">@style/PreferenceTheme.XiaomiParts.M3</item>
-
-        <item name="android:switchStyle">@style/Widget.XiaomiParts.Switch.M3</item>
-        <item name="switchStyle">@style/Widget.XiaomiParts.SwitchCompat.M3</item>
         <item name="android:seekBarStyle">@style/Widget.XiaomiParts.SeekBar.M3</item>
+    </style>
+
+    <style name="Theme.XiaomiParts.Main" parent="Theme.SubSettingsBase.Expressive">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorBackground">@color/m3_surface</item>
+        <item name="android:windowBackground">@color/m3_surface</item>
+        <item name="colorPrimary">@color/m3_primary</item>
+        <item name="android:colorAccent">@color/m3_primary</item>
+        <item name="android:colorControlActivated">@color/m3_primary</item>
+        <item name="android:colorControlNormal">@color/m3_on_surface_variant</item>
+        <item name="preferenceTheme">@style/PreferenceTheme.XiaomiParts.M3</item>
     </style>
 
 </resources>

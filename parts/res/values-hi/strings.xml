@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Xiaomi सेटिंग्स</string>
+    <string name="thermalprofile_title">थर्मल प्रोफ़ाइल</string>
+    <string name="thermalprofile_default">संतुलित</string>
+    <string name="thermalprofile_performance">प्रदर्शन</string>
+    <string name="thermalprofile_battery">बैटरी सेवर</string>
+    <string name="thermalprofile_game">गेम</string>
+    <string name="thermalprofile_unknown">अज्ञात</string>
+    <string name="thermalprofile_auto_mode_title">ऑटो मोड सक्षम करें</string>
+    <string name="thermalprofile_auto_mode_summary">स्क्रीन बंद होने पर स्वचालित रूप से बैटरी सेवर मोड पर स्विच करें और स्क्रीन चालू होने पर पिछला मोड पुनर्स्थापित करें।</string>
+    <string name="thermalprofile_auto_mode_note">नोट: उच्च बूस्ट आवृत्तियाँ (GPU 740MHz से ऊपर और CPU बूस्ट आवृत्तियाँ) केवल गेम और प्रदर्शन मोड में उपलब्ध हैं।</string>
+    <string name="thermalprofile_current_mode">वर्तमान मोड</string>
+    <string name="turbo_charge_title">चार्जिंग टूलकिट</string>
+    <string name="turbo_enable_title">चार्ज स्पीड लिमिट सक्षम करें</string>
+    <string name="turbo_charge_summary">चार्ज स्पीड लिमिट और बायपास चार्जिंग कॉन्फ़िगर करें</string>
+    <string name="turbo_charge_current_pref_title">चार्जिंग वाटेज</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">बायपास चार्जिंग</string>
+    <string name="bypass_charging_summary">गर्मी और बैटरी वियर कम करने के लिए डिवाइस को सीधे चार्जर से शक्ति दें</string>
+    <string name="core_control_header">कोर नियंत्रण</string>
+    <string name="charging_header">चार्जिंग टूलबॉक्स</string>
+    <string name="core_control_title">कोर नियंत्रण</string>
+    <string name="core_control_description">उन्नत CPU नियंत्रण। कोर बंद करने से बैटरी या थर्मल लोड कम हो सकता है, लेकिन प्रदर्शन और स्थिरता प्रभावित हो सकती है।\n\nकम से कम दो छोटे कोर हमेशा ऑनलाइन रहने चाहिए।</string>
+    <string name="core_control_min_little_warning">कम से कम 2 छोटे कोर ऑनलाइन रहने चाहिए</string>
+    <string name="core_0">कोर 0 (लिटिल)</string>
+    <string name="core_1">कोर 1 (लिटिल)</string>
+    <string name="core_2">कोर 2 (लिटिल)</string>
+    <string name="core_3">कोर 3 (लिटिल)</string>
+    <string name="core_4">कोर 4 (बिग)</string>
+    <string name="core_5">कोर 5 (बिग)</string>
+    <string name="core_6">कोर 6 (बिग)</string>
+    <string name="core_7">कोर 7 (प्राइम)</string>
+    <string name="app_summary">प्रदर्शन, थर्मल और चार्जिंग नियंत्रण </string>
+    <string name="home_subtitle">प्रदर्शन और ट्यूनिंग नियंत्रण</string>
+    <string name="nav_home">होम</string>
+    <string name="nav_thermals">थर्मल</string>
+    <string name="nav_charging">चार्जिंग</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">थर्मल प्रोफ़ाइल</string>
+    <string name="home_card_charging_title">चार्जिंग</string>
+    <string name="home_card_cores_title">कोर नियंत्रण</string>
+    <string name="home_card_perapp_title">प्रति-ऐप थर्मल</string>
+    <string name="home_charging_on">टर्बो चालू</string>
+    <string name="home_charging_off">टर्बो बंद</string>
+    <string name="home_bypass_on">बायपास चालू</string>
+    <string name="home_bypass_off">बायपास बंद</string>
+    <string name="home_bypass_unavailable">बायपास अनुपलब्ध</string>
+    <string name="home_cores_status">%2$d में से %1$d कोर ऑनलाइन</string>
+    <string name="home_tap_hint">खोलने के लिए टैप करें</string>
+    <string name="perapp_title">प्रति-ऐप थर्मल प्रोफ़ाइल</string>
+    <string name="perapp_status_on_summary">%1$d ऐप कॉन्फ़िगर किए गए</string>
+    <string name="perapp_status_off">बंद</string>
+    <string name="perapp_enable_title">प्रति-ऐप प्रोफ़ाइल सक्षम करें</string>
+    <string name="perapp_enable_summary">ऐप अग्रभूमि में आने पर स्वचालित रूप से निर्धारित थर्मल प्रोफ़ाइल लागू करें और छोड़ने पर वैश्विक प्रोफ़ाइल पुनर्स्थापित करें।</string>
+    <string name="perapp_search_hint">ऐप खोजें</string>
+    <string name="perapp_default_chip">डिफ़ॉल्ट</string>
+    <string name="perapp_profile_system">सिस्टम डिफ़ॉल्ट</string>
+    <string name="perapp_footer">प्रति-ऐप प्रोफ़ाइल सक्षम होने पर, ऐप बदलने पर थर्मल कॉन्फ़िग बदल जाता है। वैश्विक प्रोफ़ाइल अन्य सभी ऐप पर लागू होती है।</string>
+    <string name="perapp_loading">ऐप लोड हो रहे हैं\u2026</string>
+    <string name="perapp_back">वापस</string>
+</resources>

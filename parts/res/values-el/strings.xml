@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Ρυθμίσεις Xiaomi</string>
+    <string name="thermalprofile_title">Θερμικό προφίλ</string>
+    <string name="thermalprofile_default">Ισορροπημένο</string>
+    <string name="thermalprofile_performance">Απόδοση</string>
+    <string name="thermalprofile_battery">Εξοικονόμηση μπαταρίας</string>
+    <string name="thermalprofile_game">Παιχνίδι</string>
+    <string name="thermalprofile_unknown">Άγνωστο</string>
+    <string name="thermalprofile_auto_mode_title">Ενεργοποίηση αυτόματης λειτουργίας</string>
+    <string name="thermalprofile_auto_mode_summary">Αυτόματη εναλλαγή σε λειτουργία Εξοικονόμησης μπαταρίας όταν η οθόνη σβήνει και επαναφορά προηγούμενης λειτουργίας όταν ανάβει.</string>
+    <string name="thermalprofile_auto_mode_note">Σημείωση: Υψηλότερες συχνότητες Boost (GPU άνω των 740MHz και συχνότητες boost CPU) είναι διαθέσιμες μόνο σε λειτουργία Παιχνίδι και Απόδοσης.</string>
+    <string name="thermalprofile_current_mode">Τρέχουσα λειτουργία</string>
+    <string name="turbo_charge_title">Εργαλείο φόρτισης</string>
+    <string name="turbo_enable_title">Ενεργοποίηση ορίου ταχύτητας φόρτισης</string>
+    <string name="turbo_charge_summary">Διαμόρφωση ορίου ταχύτητας φόρτισης και φόρτισης bypass</string>
+    <string name="turbo_charge_current_pref_title">Ισχύς φόρτισης</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">Φόρτιση bypass</string>
+    <string name="bypass_charging_summary">Τροφοδοσία της συσκευής απευθείας από τον φορτιστή για μείωση της θερμότητας και της φθοράς μπαταρίας</string>
+    <string name="core_control_header">Έλεγχος πυρήνων</string>
+    <string name="charging_header">Εργαλείο φόρτισης</string>
+    <string name="core_control_title">Έλεγχος πυρήνων</string>
+    <string name="core_control_description">Προχωρημένος έλεγχος CPU. Η απενεργοποίηση πυρήνων μπορεί να εξοικονομήσει μπαταρία ή θερμικό φορτίο, αλλά μπορεί να επηρεάσει την απόδοση και τη σταθερότητα.\n\nΤουλάχιστον δύο little πυρήνες πρέπει να παραμένουν ενεργοί ανά πάσα στιγμή.</string>
+    <string name="core_control_min_little_warning">Τουλάχιστον 2 little πυρήνες πρέπει να παραμένουν ενεργοί</string>
+    <string name="core_0">Πυρήνας 0 (Little)</string>
+    <string name="core_1">Πυρήνας 1 (Little)</string>
+    <string name="core_2">Πυρήνας 2 (Little)</string>
+    <string name="core_3">Πυρήνας 3 (Little)</string>
+    <string name="core_4">Πυρήνας 4 (Big)</string>
+    <string name="core_5">Πυρήνας 5 (Big)</string>
+    <string name="core_6">Πυρήνας 6 (Big)</string>
+    <string name="core_7">Πυρήνας 7 (Prime)</string>
+    <string name="app_summary">Έλεγχοι απόδοσης, θερμικού και φόρτισης </string>
+    <string name="home_subtitle">Έλεγχοι απόδοσης και ρύθμισης</string>
+    <string name="nav_home">Αρχική</string>
+    <string name="nav_thermals">Θερμικά</string>
+    <string name="nav_charging">Φόρτιση</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">Θερμικό προφίλ</string>
+    <string name="home_card_charging_title">Φόρτιση</string>
+    <string name="home_card_cores_title">Έλεγχος πυρήνων</string>
+    <string name="home_card_perapp_title">Θερμικό ανά εφαρμογή</string>
+    <string name="home_charging_on">Turbo ενεργό</string>
+    <string name="home_charging_off">Turbo ανενεργό</string>
+    <string name="home_bypass_on">Bypass ενεργό</string>
+    <string name="home_bypass_off">Bypass ανενεργό</string>
+    <string name="home_bypass_unavailable">Bypass μη διαθέσιμο</string>
+    <string name="home_cores_status">%1$d από %2$d πυρήνες ενεργοί</string>
+    <string name="home_tap_hint">Πατήστε για άνοιγμα</string>
+    <string name="perapp_title">Θερμικά προφίλ ανά εφαρμογή</string>
+    <string name="perapp_status_on_summary">%1$d εφαρμογές ρυθμίστηκαν</string>
+    <string name="perapp_status_off">Ανενεργό</string>
+    <string name="perapp_enable_title">Ενεργοποίηση προφίλ ανά εφαρμογή</string>
+    <string name="perapp_enable_summary">Αυτόματη εφαρμογή του καθορισμένου θερμικού προφίλ όταν μια εφαρμογή έρχεται στο προσκήνιο και επαναφορά του καθολικού προφίλ κατά την αποχώρηση.</string>
+    <string name="perapp_search_hint">Αναζήτηση εφαρμογών</string>
+    <string name="perapp_default_chip">Προεπιλογή</string>
+    <string name="perapp_profile_system">Προεπιλογή συστήματος</string>
+    <string name="perapp_footer">Όταν τα προφίλ ανά εφαρμογή είναι ενεργά, η θερμική διαμόρφωση αλλάζει κατά την εναλλαγή εφαρμογών. Το καθολικό προφίλ ισχύει για όλες τις άλλες εφαρμογές.</string>
+    <string name="perapp_loading">Φόρτωση εφαρμογών\u2026</string>
+    <string name="perapp_back">Πίσω</string>
+</resources>

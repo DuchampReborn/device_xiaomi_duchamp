@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">إعدادات شاومي</string>
+    <string name="thermalprofile_title">ملف الحراري</string>
+    <string name="thermalprofile_default">متوازن</string>
+    <string name="thermalprofile_performance">الأداء</string>
+    <string name="thermalprofile_battery">توفير البطارية</string>
+    <string name="thermalprofile_game">لعبة</string>
+    <string name="thermalprofile_unknown">غير معروف</string>
+    <string name="thermalprofile_auto_mode_title">تفعيل الوضع التلقائي</string>
+    <string name="thermalprofile_auto_mode_summary">التبديل تلقائيًا إلى وضع توفير البطارية عند إطفاء الشاشة واستعادة الوضع السابق عند تشغيلها.</string>
+    <string name="thermalprofile_auto_mode_note">ملاحظة: تتوفر ترددات التعزيز الأعلى (وحدة الرسوميات فوق 740 ميجاهرتز وترددات تعزيز المعالج) فقط في وضعي اللعبة والأداء.</string>
+    <string name="thermalprofile_current_mode">الوضع الحالي</string>
+    <string name="turbo_charge_title">صندوق أدوات الشحن</string>
+    <string name="turbo_enable_title">تفعيل حد سرعة الشحن</string>
+    <string name="turbo_charge_summary">تكوين حد سرعة الشحن والشحن التحويلي</string>
+    <string name="turbo_charge_current_pref_title">قدرة الشحن</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">الشحن التحويلي</string>
+    <string name="bypass_charging_summary">تزويد الجهاز بالطاقة مباشرة من الشاحن لتقليل الحرارة وتآكل البطارية</string>
+    <string name="core_control_header">التحكم بالنواة</string>
+    <string name="charging_header">صندوق أدوات الشحن</string>
+    <string name="core_control_title">التحكم بالنواة</string>
+    <string name="core_control_description">تحكم متقدم في المعالج. قد يؤدي إيقاف النوى إلى توفير البطارية أو الحمل الحراري، ولكن قد يؤثر على الأداء والاستقرار.\n\nيجب أن تبقى نواتان صغيرتان على الأقل متصلتين في جميع الأوقات.</string>
+    <string name="core_control_min_little_warning">يجب أن تبقى نواتان صغيرتان على الأقل متصلتين</string>
+    <string name="core_0">النواة 0 (صغيرة)</string>
+    <string name="core_1">النواة 1 (صغيرة)</string>
+    <string name="core_2">النواة 2 (صغيرة)</string>
+    <string name="core_3">النواة 3 (صغيرة)</string>
+    <string name="core_4">النواة 4 (كبيرة)</string>
+    <string name="core_5">النواة 5 (كبيرة)</string>
+    <string name="core_6">النواة 6 (كبيرة)</string>
+    <string name="core_7">النواة 7 (رئيسية)</string>
+    <string name="app_summary">ضوابط الأداء والحرارية والشحن </string>
+    <string name="home_subtitle">ضوابط الأداء والضبط</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_thermals">الحرارية</string>
+    <string name="nav_charging">الشحن</string>
+    <string name="nav_cpu">المعالج</string>
+    <string name="home_card_thermal_title">الملف الحراري</string>
+    <string name="home_card_charging_title">الشحن</string>
+    <string name="home_card_cores_title">التحكم بالنواة</string>
+    <string name="home_card_perapp_title">حرارية لكل تطبيق</string>
+    <string name="home_charging_on">توربو يعمل</string>
+    <string name="home_charging_off">توربو متوقف</string>
+    <string name="home_bypass_on">التحويل يعمل</string>
+    <string name="home_bypass_off">التحويل متوقف</string>
+    <string name="home_bypass_unavailable">التحويل غير متاح</string>
+    <string name="home_cores_status">%1$d من %2$d نواة متصلة</string>
+    <string name="home_tap_hint">اضغط للفتح</string>
+    <string name="perapp_title">ملفات حرارية لكل تطبيق</string>
+    <string name="perapp_status_on_summary">%1$d تطبيقات مُهيأة</string>
+    <string name="perapp_status_off">إيقاف</string>
+    <string name="perapp_enable_title">تفعيل الملفات لكل تطبيق</string>
+    <string name="perapp_enable_summary">تطبيق الملف الحراري المخصص تلقائيًا عند قدوم تطبيق إلى المقدمة واستعادة الملف العام عند مغادرته.</string>
+    <string name="perapp_search_hint">البحث في التطبيقات</string>
+    <string name="perapp_default_chip">افتراضي</string>
+    <string name="perapp_profile_system">الافتراضي للنظام</string>
+    <string name="perapp_footer">عند تفعيل الملفات لكل تطبيق، يتغير التكوين الحراري عند تبديل التطبيقات. ينطبق الملف العام على جميع التطبيقات الأخرى.</string>
+    <string name="perapp_loading">جارٍ تحميل التطبيقات\u2026</string>
+    <string name="perapp_back">رجوع</string>
+</resources>

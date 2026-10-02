@@ -74,18 +74,6 @@
         <item name="layout">@layout/xp_preference_material</item>
     </style>
 
-    <style name="Widget.XiaomiParts.SwitchCompat.M3" parent="@style/Widget.XiaomiParts.Switch.M3">
-        <item name="android:thumb">@drawable/m3_switch_thumb</item>
-        <item name="android:track">@drawable/m3_switch_track</item>
-    </style>
-
-    <style name="Widget.XiaomiParts.Switch.M3" parent="@android:style/Widget.Material.CompoundButton.Switch">
-        <item name="android:thumb">@drawable/m3_switch_thumb</item>
-        <item name="android:track">@drawable/m3_switch_track</item>
-        <item name="android:switchMinWidth">@dimen/m3_switch_track_width</item>
-        <item name="android:switchPadding">0dp</item>
-    </style>
-
     <style name="Widget.XiaomiParts.SeekBar.M3" parent="@android:style/Widget.Material.SeekBar">
         <item name="android:progressDrawable">@drawable/m3_slider_progress</item>
         <item name="android:thumb">@drawable/m3_slider_thumb</item>

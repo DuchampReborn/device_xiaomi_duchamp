@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Material 3 Expressive tonal card: flat surface-container fill with a
-    generous 24dp corner radius and a bounded ripple on top.
--->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="@color/m3_primary">
 

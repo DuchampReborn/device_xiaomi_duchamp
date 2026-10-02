@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    TurboCharging - Material 3 Expressive.
-    Key/class contract preserved: turbo_top_intro (display only), turbo_enable,
-    turbo_current, pd_verified_enable (TurboChargingFragment binds these).
--->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"

@@ -13,7 +13,6 @@ import vendor.xiaomi.hardware.displayfeature_aidl.IDisplayFeature
 object DisplayFeatureWrapper {
 
     private const val TAG = "DisplayFeatureWrapper"
-    //private val DEBUG = Log.isLoggable(TAG, Log.DEBUG)
     private val DEBUG = true
 
     @Volatile private var displayFeature: IDisplayFeature? = null
@@ -48,7 +47,7 @@ object DisplayFeatureWrapper {
                     return
                 }
         if (DEBUG) Log.d(TAG, "setFeature: mode=$mode, value=$value, cookie=$cookie")
-        runCatching { displayFeature.setFeature(/*displayId*/ 0, mode, value, cookie) }
+        runCatching { displayFeature.setFeature( 0, mode, value, cookie) }
             .onFailure { e -> Log.e(TAG, "setFeature failed!", e) }
     }
 }

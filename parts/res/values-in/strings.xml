@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Pengaturan Xiaomi</string>
+    <string name="thermalprofile_title">Profil termal</string>
+    <string name="thermalprofile_default">Seimbang</string>
+    <string name="thermalprofile_performance">Performa</string>
+    <string name="thermalprofile_battery">Penghemat baterai</string>
+    <string name="thermalprofile_game">Game</string>
+    <string name="thermalprofile_unknown">Tidak diketahui</string>
+    <string name="thermalprofile_auto_mode_title">Aktifkan mode otomatis</string>
+    <string name="thermalprofile_auto_mode_summary">Beralih otomatis ke mode Penghemat baterai saat layar mati dan memulihkan mode sebelumnya saat layar menyala.</string>
+    <string name="thermalprofile_auto_mode_note">Catatan: Frekuensi Boost yang lebih tinggi (GPU di atas 740MHz dan frekuensi boost CPU) hanya tersedia di mode Game dan Performa.</string>
+    <string name="thermalprofile_current_mode">Mode saat ini</string>
+    <string name="turbo_charge_title">Toolkit pengisian daya</string>
+    <string name="turbo_enable_title">Aktifkan batas kecepatan pengisian</string>
+    <string name="turbo_charge_summary">Konfigurasi batas kecepatan pengisian dan pengisian bypass</string>
+    <string name="turbo_charge_current_pref_title">Daya pengisian</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">Pengisian bypass</string>
+    <string name="bypass_charging_summary">Dayai perangkat langsung dari pengisi daya untuk mengurangi panas dan keausan baterai</string>
+    <string name="core_control_header">Kontrol inti</string>
+    <string name="charging_header">Toolkit pengisian daya</string>
+    <string name="core_control_title">Kontrol inti</string>
+    <string name="core_control_description">Kontrol CPU lanjutan. Mematikan inti dapat menghemat baterai atau beban termal, tetapi dapat memengaruhi performa dan stabilitas.\n\nSetidaknya dua inti kecil harus tetap aktif setiap saat.</string>
+    <string name="core_control_min_little_warning">Setidaknya 2 inti kecil harus tetap aktif</string>
+    <string name="core_0">Inti 0 (Kecil)</string>
+    <string name="core_1">Inti 1 (Kecil)</string>
+    <string name="core_2">Inti 2 (Kecil)</string>
+    <string name="core_3">Inti 3 (Kecil)</string>
+    <string name="core_4">Inti 4 (Besar)</string>
+    <string name="core_5">Inti 5 (Besar)</string>
+    <string name="core_6">Inti 6 (Besar)</string>
+    <string name="core_7">Inti 7 (Prime)</string>
+    <string name="app_summary">Kontrol performa, termal, dan pengisian daya </string>
+    <string name="home_subtitle">Kontrol performa &amp; penyetelan</string>
+    <string name="nav_home">Beranda</string>
+    <string name="nav_thermals">Termal</string>
+    <string name="nav_charging">Pengisian</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">Profil termal</string>
+    <string name="home_card_charging_title">Pengisian</string>
+    <string name="home_card_cores_title">Kontrol inti</string>
+    <string name="home_card_perapp_title">Termal per-aplikasi</string>
+    <string name="home_charging_on">Turbo aktif</string>
+    <string name="home_charging_off">Turbo nonaktif</string>
+    <string name="home_bypass_on">Bypass aktif</string>
+    <string name="home_bypass_off">Bypass nonaktif</string>
+    <string name="home_bypass_unavailable">Bypass tidak tersedia</string>
+    <string name="home_cores_status">%1$d dari %2$d inti aktif</string>
+    <string name="home_tap_hint">Ketuk untuk membuka</string>
+    <string name="perapp_title">Profil termal per-aplikasi</string>
+    <string name="perapp_status_on_summary">%1$d aplikasi dikonfigurasi</string>
+    <string name="perapp_status_off">Nonaktif</string>
+    <string name="perapp_enable_title">Aktifkan profil per-aplikasi</string>
+    <string name="perapp_enable_summary">Otomatis menerapkan profil termal yang ditetapkan saat aplikasi muncul di latar depan dan memulihkan profil global saat keluar.</string>
+    <string name="perapp_search_hint">Cari aplikasi</string>
+    <string name="perapp_default_chip">Default</string>
+    <string name="perapp_profile_system">Default sistem</string>
+    <string name="perapp_footer">Saat profil per-aplikasi diaktifkan, konfigurasi termal berubah saat Anda beralih aplikasi. Profil global berlaku untuk semua aplikasi lain.</string>
+    <string name="perapp_loading">Memuat aplikasi\u2026</string>
+    <string name="perapp_back">Kembali</string>
+</resources>

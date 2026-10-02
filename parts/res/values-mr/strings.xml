@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Xiaomi Parts</string>
+    <string name="app_title">Xiaomi सेटिंग्ज</string>
+    <string name="thermalprofile_title">थर्मल प्रोफाइल</string>
+    <string name="thermalprofile_default">संतुलित</string>
+    <string name="thermalprofile_performance">कामगिरी</string>
+    <string name="thermalprofile_battery">बॅटरी सेव्हर</string>
+    <string name="thermalprofile_game">गेम</string>
+    <string name="thermalprofile_unknown">अज्ञात</string>
+    <string name="thermalprofile_auto_mode_title">ऑटो मोड सक्षम करा</string>
+    <string name="thermalprofile_auto_mode_summary">स्क्रीन बंद झाल्यावर आपोआप बॅटरी सेव्हर मोडवर स्विच करा आणि स्क्रीन चालू झाल्यावर आधीचा मोड पुनर्संचयित करा.</string>
+    <string name="thermalprofile_auto_mode_note">टीप: उच्च बूस्ट फ्रिक्वेन्सी (GPU 740MHz वरून आणि CPU बूस्ट फ्रिक्वेन्सी) फक्त गेम आणि कामगिरी मोडमध्ये उपलब्ध आहेत.</string>
+    <string name="thermalprofile_current_mode">सध्याचा मोड</string>
+    <string name="turbo_charge_title">चार्जिंग टूलकिट</string>
+    <string name="turbo_enable_title">चार्ज स्पीड मर्यादा सक्षम करा</string>
+    <string name="turbo_charge_summary">चार्ज स्पीड मर्यादा आणि बायपास चार्जिंग कॉन्फिगर करा</string>
+    <string name="turbo_charge_current_pref_title">चार्जिंग वॅटेज</string>
+    <string name="turbo_mode_one">18W</string>
+    <string name="turbo_mode_two">30W</string>
+    <string name="turbo_mode_three">67W</string>
+    <string name="bypass_charging_title">बायपास चार्जिंग</string>
+    <string name="bypass_charging_summary">उष्णता आणि बॅटरी घसरण कमी करण्यासाठी डिव्हाइसला थेट चार्जरवरून वीज द्या</string>
+    <string name="core_control_header">कोर नियंत्रण</string>
+    <string name="charging_header">चार्जिंग टूलबॉक्स</string>
+    <string name="core_control_title">कोर नियंत्रण</string>
+    <string name="core_control_description">प्रगत CPU नियंत्रण. कोर बंद केल्याने बॅटरी किंवा थर्मल लोड वाचू शकतो, परंतु कामगिरी आणि स्थिरता प्रभावित होऊ शकते.\n\nकिमान दोन लिटल कोर नेहमी ऑनलाइन राहिले पाहिजेत.</string>
+    <string name="core_control_min_little_warning">किमान 2 लिटल कोर ऑनलाइन राहिले पाहिजेत</string>
+    <string name="core_0">कोर 0 (लिटल)</string>
+    <string name="core_1">कोर 1 (लिटल)</string>
+    <string name="core_2">कोर 2 (लिटल)</string>
+    <string name="core_3">कोर 3 (लिटल)</string>
+    <string name="core_4">कोर 4 (बिग)</string>
+    <string name="core_5">कोर 5 (बिग)</string>
+    <string name="core_6">कोर 6 (बिग)</string>
+    <string name="core_7">कोर 7 (प्राइम)</string>
+    <string name="app_summary">कामगिरी, थर्मल आणि चार्जिंग नियंत्रण </string>
+    <string name="home_subtitle">कामगिरी आणि ट्युनिंग नियंत्रण</string>
+    <string name="nav_home">होम</string>
+    <string name="nav_thermals">थर्मल</string>
+    <string name="nav_charging">चार्जिंग</string>
+    <string name="nav_cpu">CPU</string>
+    <string name="home_card_thermal_title">थर्मल प्रोफाइल</string>
+    <string name="home_card_charging_title">चार्जिंग</string>
+    <string name="home_card_cores_title">कोर नियंत्रण</string>
+    <string name="home_card_perapp_title">प्रति-अॅप थर्मल</string>
+    <string name="home_charging_on">टर्बो चालू</string>
+    <string name="home_charging_off">टर्बो बंद</string>
+    <string name="home_bypass_on">बायपास चालू</string>
+    <string name="home_bypass_off">बायपास बंद</string>
+    <string name="home_bypass_unavailable">बायपास अनुपलब्ध</string>
+    <string name="home_cores_status">%2$d पैकी %1$d कोर ऑनलाइन</string>
+    <string name="home_tap_hint">उघडण्यासाठी टॅप करा</string>
+    <string name="perapp_title">प्रति-अॅप थर्मल प्रोफाइल</string>
+    <string name="perapp_status_on_summary">%1$d अॅप्स कॉन्फिगर केले</string>
+    <string name="perapp_status_off">बंद</string>
+    <string name="perapp_enable_title">प्रति-अॅप प्रोफाइल सक्षम करा</string>
+    <string name="perapp_enable_summary">अॅप अग्रभागी आल्यावर नियुक्त थर्मल प्रोफाइल आपोआप लागू करा आणि सोडल्यावर ग्लोबल प्रोफाइल पुनर्संचयित करा.</string>
+    <string name="perapp_search_hint">अॅप्स शोधा</string>
+    <string name="perapp_default_chip">डिफॉल्ट</string>
+    <string name="perapp_profile_system">सिस्टम डिफॉल्ट</string>
+    <string name="perapp_footer">प्रति-अॅप प्रोफाइल सक्षम असल्यावर, अॅप्स बदलल्याने थर्मल कॉन्फिग बदलते. ग्लोबल प्रोफाइल इतर सर्व अॅप्सवर लागू होते.</string>
+    <string name="perapp_loading">अॅप्स लोड होत आहेत\u2026</string>
+    <string name="perapp_back">मागे</string>
+</resources>
