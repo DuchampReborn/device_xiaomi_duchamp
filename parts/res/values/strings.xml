@@ -50,6 +50,7 @@
     <string name="nav_thermals">Thermals</string>
     <string name="nav_charging">Charging</string>
     <string name="nav_cpu">CPU</string>
+    <string name="nav_htsr">HTSR</string>
     <string name="home_card_thermal_title">Thermal profile</string>
     <string name="home_card_charging_title">Charging</string>
     <string name="home_card_cores_title">Core control</string>
@@ -73,4 +74,20 @@
     <string name="perapp_footer">When per-app profiles are enabled, the thermal config switches as you switch apps. The global profile applies to all other apps.</string>
     <string name="perapp_loading">Loading apps\u2026</string>
     <string name="perapp_back">Back</string>
+
+    <string name="touch_sampling_title">Touch sampling</string>
+    <string name="htsr_enable_title">Enhanced touch responsiveness</string>
+    <string name="htsr_enable_summary">Increases touch polling rate to decrease touch input latency for a smoother experience</string>
+    <string name="touch_sampling_auto_title">Auto-enable for selected apps</string>
+    <string name="touch_sampling_auto_summary">If turned on, selected apps will auto-enable high touch polling even if the main switch is off</string>
+    <string name="touch_sampling_footer">Pick the apps below to bump the touch sampling rate automatically while they are in the foreground. High touch polling may increase battery consumption.</string>
+    <string name="touch_sampling_mode_title">High touch polling mode</string>
+    <string name="touch_sampling_mode_notification">High touch polling rate is now active. This reduces touch input latency but may increase battery consumption</string>
+    <string name="touch_sampling_tile_label">Touch Boost</string>
+    <string name="tile_on">On</string>
+    <string name="tile_off">Off</string>
+    <string name="home_card_touch_title">Touch sampling</string>
+    <string name="home_touch_on">On</string>
+    <string name="home_touch_auto">Auto \u00b7 %1$d apps</string>
+    <string name="home_touch_off">Off</string>
 </resources>

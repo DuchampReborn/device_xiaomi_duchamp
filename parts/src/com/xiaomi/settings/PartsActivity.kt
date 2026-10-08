@@ -8,6 +8,8 @@ package com.xiaomi.settings
 import android.app.Activity
 import android.app.DialogFragment
 import android.app.Fragment
+import android.content.ComponentName
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -22,6 +24,8 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 
 import com.xiaomi.settings.corecontrol.CoreControlFragment
+import com.xiaomi.settings.touchsampling.TouchSamplingFragment
+import com.xiaomi.settings.touchsampling.TouchSamplingTileService
 import com.xiaomi.settings.turbocharging.TurboChargingFragment
 import com.xiaomi.settings.thermal.ThermalProfileFragment
 import com.xiaomi.settings.ui.HomeFragment
@@ -51,18 +55,39 @@ class PartsActivity : Activity(), HomeFragment.Navigator,
         navBar.addItem(TAB_THERMAL, R.drawable.ic_thermal_tile, R.string.nav_thermals)
         navBar.addItem(TAB_CHARGING, R.drawable.ic_m3_bolt, R.string.nav_charging)
         navBar.addItem(TAB_CPU, R.drawable.ic_nav_cpu, R.string.nav_cpu)
+        navBar.addItem(TAB_HTSR, R.drawable.ic_touch_sampling_tile, R.string.nav_htsr)
 
         navBar.onItemSelectedListener = { tab -> switchTo(tab) }
 
         applyWindowInsets()
 
-        currentTab = savedInstanceState?.getInt(STATE_TAB, TAB_HOME) ?: TAB_HOME
+        currentTab = savedInstanceState?.getInt(STATE_TAB, TAB_HOME)
+                ?: resolveLaunchTab(intent) ?: TAB_HOME
         if (savedInstanceState == null ||
                 fragmentManager.findFragmentById(R.id.parts_content) == null) {
             switchTo(currentTab)
         } else {
             navBar.setSelectedItem(currentTab)
         }
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        if (intent == null) return
+        setIntent(intent)
+        resolveLaunchTab(intent)?.let { if (it != currentTab) switchTo(it) }
+    }
+
+    private fun resolveLaunchTab(intent: Intent?): Int? {
+        if (intent == null) return null
+        val extra = intent.getIntExtra(EXTRA_OPEN_TAB, -1)
+        if (extra in TAB_HOME..TAB_HTSR) return extra
+        val comp: ComponentName? = intent.getParcelableExtra(Intent.EXTRA_COMPONENT_NAME)
+        if (comp != null &&
+                comp.className == TouchSamplingTileService::class.java.name) {
+            return TAB_HTSR
+        }
+        return null
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -103,6 +128,7 @@ class PartsActivity : Activity(), HomeFragment.Navigator,
             TAB_THERMAL -> ThermalProfileFragment()
             TAB_CHARGING -> TurboChargingFragment()
             TAB_CPU -> CoreControlFragment()
+            TAB_HTSR -> TouchSamplingFragment()
             else -> HomeFragment()
         }
 
@@ -132,6 +158,8 @@ class PartsActivity : Activity(), HomeFragment.Navigator,
         const val TAB_THERMAL = 1
         const val TAB_CHARGING = 2
         const val TAB_CPU = 3
+        const val TAB_HTSR = 4
+        const val EXTRA_OPEN_TAB = "extra_open_tab"
 
         private const val STATE_TAB = "selected_tab"
         private const val DIALOG_FRAGMENT_TAG = "androidx.preference.PreferenceFragment.DIALOG"

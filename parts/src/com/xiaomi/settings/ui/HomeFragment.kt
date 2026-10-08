@@ -21,6 +21,7 @@ import com.xiaomi.settings.R
 import com.xiaomi.settings.thermal.PerAppProfileStore
 import com.xiaomi.settings.thermal.PerAppThermalActivity
 import com.xiaomi.settings.thermal.ThermalProfileFragment
+import com.xiaomi.settings.touchsampling.TouchSamplingFragment
 import com.xiaomi.settings.turbocharging.TurboChargingFragment
 import com.xiaomi.settings.utils.FileUtils
 import java.io.BufferedReader
@@ -39,6 +40,7 @@ class HomeFragment : Fragment() {
     private lateinit var tvChargingStatus: TextView
     private lateinit var tvCoresStatus: TextView
     private lateinit var tvPerAppStatus: TextView
+    private lateinit var tvTouchStatus: TextView
 
     override fun onAttach(activity: android.app.Activity) {
         super.onAttach(activity)
@@ -67,6 +69,7 @@ class HomeFragment : Fragment() {
         tvChargingStatus = view.findViewById(R.id.tv_charging_status)
         tvCoresStatus = view.findViewById(R.id.tv_cores_status)
         tvPerAppStatus = view.findViewById(R.id.tv_perapp_status)
+        tvTouchStatus = view.findViewById(R.id.tv_touch_status)
 
         view.findViewById<View>(R.id.card_thermal).setOnClickListener {
             navigator?.onNavigate(PartsActivity.TAB_THERMAL)
@@ -79,6 +82,9 @@ class HomeFragment : Fragment() {
         }
         view.findViewById<View>(R.id.card_perapp).setOnClickListener {
             startActivity(Intent(activity, PerAppThermalActivity::class.java))
+        }
+        view.findViewById<View>(R.id.card_touch).setOnClickListener {
+            navigator?.onNavigate(PartsActivity.TAB_HTSR)
         }
     }
 
@@ -125,6 +131,20 @@ class HomeFragment : Fragment() {
             tvPerAppStatus.text = getString(R.string.perapp_status_on_summary, count)
         } else {
             tvPerAppStatus.text = getString(R.string.perapp_status_off)
+        }
+
+        val touchPrefs = activity.getSharedPreferences(
+            TouchSamplingFragment.SHARED_HTSR, android.content.Context.MODE_PRIVATE)
+        val touchMain = touchPrefs.getBoolean(TouchSamplingFragment.PREF_HTSR_STATE, false)
+        val touchAuto = touchPrefs.getBoolean(TouchSamplingFragment.PREF_HTSR_AUTO, true)
+        when {
+            touchMain -> tvTouchStatus.text = getString(R.string.home_touch_on)
+            touchAuto -> {
+                val count = PreferenceManager.getDefaultSharedPreferences(activity)
+                    .getStringSet(TouchSamplingFragment.PREF_HTSR_AUTO_APPS, emptySet())?.size ?: 0
+                tvTouchStatus.text = getString(R.string.home_touch_auto, count)
+            }
+            else -> tvTouchStatus.text = getString(R.string.home_touch_off)
         }
     }
 

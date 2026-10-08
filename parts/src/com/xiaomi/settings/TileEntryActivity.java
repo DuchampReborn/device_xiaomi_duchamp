@@ -32,6 +32,7 @@ public class TileEntryActivity extends Activity {
     private static final String TAG = "TileEntryActivity";
     private static final String THERMAL_TILE = "com.xiaomi.settings.thermal.ThermalProfileTileService";
     private static final String BYPASS_CHARGING_TILE = "com.xiaomi.settings.turbocharging.BypassChargingTileService";
+    private static final String HTSR_TILE = "com.xiaomi.settings.touchsampling.TouchSamplingTileService";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,6 +51,9 @@ public class TileEntryActivity extends Activity {
             intent = new Intent(this, ThermalProfileActivity.class);
         } else if (BYPASS_CHARGING_TILE.equals(sourceClassName)) {
             intent = new Intent(this, TurboChargingActivity.class);
+        } else if (HTSR_TILE.equals(sourceClassName)) {
+            intent = new Intent(this, PartsActivity.class);
+            intent.putExtra(PartsActivity.EXTRA_OPEN_TAB, PartsActivity.TAB_HTSR);
         } else {
             Log.e(TAG, "Unknown tile: " + sourceClassName);
             finish();

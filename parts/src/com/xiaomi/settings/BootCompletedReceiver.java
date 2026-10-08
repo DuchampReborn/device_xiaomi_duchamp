@@ -26,6 +26,7 @@ import com.xiaomi.settings.display.ColorService;
 import com.xiaomi.settings.thermal.PerAppProfileService;
 import com.xiaomi.settings.thermal.PerAppProfileStore;
 import com.xiaomi.settings.thermal.ThermalProfileFragment;
+import com.xiaomi.settings.touchsampling.TouchSamplingService;
 import com.xiaomi.settings.turbocharging.TurboChargingService;
 import com.xiaomi.settings.utils.FileUtils;
 
@@ -80,6 +81,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (PerAppProfileStore.INSTANCE.isEnabled(context)) {
             context.startService(new Intent(context, PerAppProfileService.class));
         }
+
+        context.startService(new Intent(context, TouchSamplingService.class));
     }
 
     private void restoreThermalProfile(Context context) {

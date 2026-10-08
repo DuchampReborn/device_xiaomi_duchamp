@@ -292,6 +292,75 @@
 
         </LinearLayout>
 
+        <FrameLayout
+            android:id="@+id/card_touch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m3_space_m"
+            android:minHeight="@dimen/home_card_min_height"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/m3_card_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/m3_space_xl">
+
+                <FrameLayout
+                    android:layout_width="@dimen/home_icon_chip"
+                    android:layout_height="@dimen/home_icon_chip"
+                    android:background="@drawable/bg_icon_chip_rounded">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_touch_sampling_tile"
+                        android:importantForAccessibility="no" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/m3_space_l"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_card_touch_title"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_touch_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textSize="13sp"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@string/home_touch_off" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_m3_chevron"
+                    android:importantForAccessibility="no" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
     </LinearLayout>
 
 </ScrollView>

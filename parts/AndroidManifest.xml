@@ -62,6 +62,31 @@
             android:name=".thermal.PerAppProfileService"
             android:exported="false" />
 
+        <service
+            android:name=".touchsampling.TouchSamplingService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false" />
+
+        <service
+            android:name=".touchsampling.TouchSamplingTileService"
+            android:icon="@drawable/ic_touch_sampling_tile"
+            android:label="@string/touch_sampling_tile_label"
+            android:exported="true"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="false" />
+            <meta-data
+                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="true" />
+            <meta-data
+                android:name="android.service.quicksettings.TILE_SERVICE_SETTINGS"
+                android:value="com.xiaomi.settings.PartsActivity" />
+        </service>
+
         <receiver
             android:name=".BootCompletedReceiver"
             android:exported="true"
