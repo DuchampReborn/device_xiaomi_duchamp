@@ -652,4 +652,7 @@
 
     <!-- Sets the refresh rate specifically for Keyguard / Ambient Display -->
     <integer name="config_keyguardRefreshRate">60</integer>
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">120</integer>
 </resources>
