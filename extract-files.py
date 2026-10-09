@@ -222,6 +222,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/mnld': blob_fixup()
         .replace_needed('libmnl.so', 'libmnl-v34.so'),
 
+    'vendor/etc/init/tee-supplicant.rc': blob_fixup()
+        .regex_replace('chown system system /dev/ufs-bsg0', 'chown root system /dev/ufs-bsg0'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
