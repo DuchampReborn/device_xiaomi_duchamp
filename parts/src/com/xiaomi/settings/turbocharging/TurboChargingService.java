@@ -17,24 +17,30 @@
 package com.xiaomi.settings.turbocharging;
 
 import android.app.Service;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.os.BatteryManager;
 import android.os.IBinder;
 import android.util.Log;
 
 import androidx.preference.PreferenceManager;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-
 public class TurboChargingService extends Service {
     private static final String TAG = "TurboCharging";
-    private static final String CHARGE_CURRENT_FILE = "/sys/class/power_supply/battery/constant_charge_current";
-    private static final String PREF_TURBO_ENABLED = "turbo_enable";
-    private static final String PREF_TURBO_CURRENT = "turbo_current";
 
     private SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener;
+
+    private final BroadcastReceiver mPowerReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (Intent.ACTION_POWER_DISCONNECTED.equals(intent.getAction())) {
+                disableBypassIfActive();
+            }
+        }
+    };
 
     @Override
     public void onCreate() {
@@ -45,41 +51,32 @@ public class TurboChargingService extends Service {
         preferenceChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
             @Override
             public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-                if (key.equals(PREF_TURBO_ENABLED) || key.equals(PREF_TURBO_CURRENT)) {
-                    updateChargeCurrent();
+                if (ChargeController.PREF_TURBO_ENABLED.equals(key)
+                        || ChargeController.PREF_TURBO_CURRENT.equals(key)) {
+                    ChargeController.apply(TurboChargingService.this);
                 }
             }
         };
         prefs.registerOnSharedPreferenceChangeListener(preferenceChangeListener);
 
-        updateChargeCurrent();
+        registerReceiver(mPowerReceiver, new IntentFilter(Intent.ACTION_POWER_DISCONNECTED));
+
+        if (!isPluggedIn()) {
+            disableBypassIfActive();
+        }
+        ChargeController.apply(this);
     }
 
-    private void updateChargeCurrent() {
-        boolean turboEnabled = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(PREF_TURBO_ENABLED, false);
-        Log.i(TAG, "isTurbo=" + turboEnabled);
-        String defaultValue = "21000000";
-        if (turboEnabled) {
-            String currentValue = PreferenceManager.getDefaultSharedPreferences(this).getString(PREF_TURBO_CURRENT, "22000000");
-            Log.i(TAG, "currentValue=" + currentValue);
-            writeChargeCurrent(currentValue);
-        } else {
-            writeChargeCurrent(defaultValue);
+    private void disableBypassIfActive() {
+        if (ChargeController.isBypassEnabled()) {
+            Log.i(TAG, "Power disconnected, disabling bypass charging");
+            ChargeController.setBypass(this, false);
         }
     }
 
-    private void writeChargeCurrent(String value) {
-        try {
-            Integer.parseInt(value);
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(CHARGE_CURRENT_FILE))) {
-                writer.write(value);
-                Log.i(TAG, "Updated Charging current to " + value);
-            }
-        } catch (NumberFormatException e) {
-            Log.e(TAG, "Invalid charge current value: " + value, e);
-        } catch (IOException e) {
-            Log.e(TAG, "Failed to update charge current", e);
-        }
+    private boolean isPluggedIn() {
+        Intent battery = registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+        return battery != null && battery.getIntExtra(BatteryManager.EXTRA_PLUGGED, 0) != 0;
     }
 
     @Override
@@ -97,5 +94,6 @@ public class TurboChargingService extends Service {
         super.onDestroy();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         prefs.unregisterOnSharedPreferenceChangeListener(preferenceChangeListener);
+        unregisterReceiver(mPowerReceiver);
     }
 }

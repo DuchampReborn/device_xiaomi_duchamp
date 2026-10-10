@@ -28,11 +28,6 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 
 import com.xiaomi.settings.R;
 import com.xiaomi.settings.ui.PageHeader;
@@ -40,7 +35,7 @@ import com.xiaomi.settings.ui.PageHeader;
 public class TurboChargingFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "TurboChargingFragment";
-    public static final String BYPASS_CHARGING_FILE = "/proc/mtk_battery_cmd/current_cmd";
+    public static final String BYPASS_CHARGING_FILE = ChargeController.BYPASS_CHARGING_FILE;
     public static final String PREF_TURBO_ENABLED = "turbo_enable";
     public static final String PREF_TURBO_CURRENT = "turbo_current";
     public static final String PREF_BYPASS_CHARGING = "bypass_charging_enable";
@@ -77,25 +72,12 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
     }
 
     private void syncBypassChargingToggle() {
-        boolean nodeValue = readBypassChargingNode();
+        boolean nodeValue = ChargeController.isBypassEnabled();
         Log.i(TAG, "syncBypassChargingToggle: node=" + nodeValue);
 
         mBypassChargingEnabled.setOnPreferenceChangeListener(null);
         mBypassChargingEnabled.setChecked(nodeValue);
         mBypassChargingEnabled.setOnPreferenceChangeListener(this);
-    }
-
-    private boolean readBypassChargingNode() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(BYPASS_CHARGING_FILE))) {
-            String line = reader.readLine();
-            if (line != null) {
-                String[] parts = line.trim().split("\\s+");
-                return parts.length > 1 && parts[1].equals("1");
-            }
-        } catch (IOException e) {
-            Log.e(TAG, "Failed to read Bypass Charging node", e);
-        }
-        return false;
     }
 
     @Override
@@ -120,12 +102,6 @@ public class TurboChargingFragment extends PreferenceFragment implements Prefere
     }
 
     private void updateBypassCharging(boolean enabled) {
-        String value = enabled ? "0 1" : "0 0";
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(BYPASS_CHARGING_FILE))) {
-            writer.write(value);
-            Log.i(TAG, "Updated Bypass Charge to " + value);
-        } catch (IOException e) {
-            Log.e(TAG, "Failed to update Bypass Charge", e);
-        }
+        ChargeController.setBypass(getActivity(), enabled);
     }
 }
