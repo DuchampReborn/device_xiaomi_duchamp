@@ -425,5 +425,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.direct.prebuilt.xml \
     android.hardware.wifi.passpoint.prebuilt.xml
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.wificountrycode=US
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/duchamp/duchamp-vendor.mk)
