@@ -77,7 +77,9 @@ class PerAppProfileService : Service() {
             true
         }
 
-        if (PerAppProfileStore.baseProfile(this, -1) == -1) {
+        overrideActive = PerAppProfileStore.isOverrideActive(this)
+
+        if (!overrideActive && PerAppProfileStore.baseProfile(this, -1) == -1) {
             val current = FileUtils.readLineInt(THERMAL_PROFILE_PATH)
             if (current != 0) {
                 PerAppProfileStore.setBaseProfile(this, current)
@@ -155,8 +157,15 @@ class PerAppProfileService : Service() {
 
         val mapped = PerAppProfileStore.getProfile(this, packageName)
         if (mapped != null) {
+            if (!overrideActive) {
+                val current = FileUtils.readLineInt(THERMAL_PROFILE_PATH)
+                if (current != 0) {
+                    PerAppProfileStore.setBaseProfile(this, current)
+                }
+            }
             FileUtils.writeLine(THERMAL_PROFILE_PATH, mapped)
             overrideActive = true
+            PerAppProfileStore.setOverrideActive(this, true)
         } else if (overrideActive) {
             restoreBaseProfile()
         } else {
@@ -175,6 +184,7 @@ class PerAppProfileService : Service() {
             .putString(PREF_THERMAL_PROFILE, base.toString())
             .apply()
         overrideActive = false
+        PerAppProfileStore.setOverrideActive(this, false)
     }
 
     companion object {

@@ -14,6 +14,7 @@ object PerAppProfileStore {
     const val PREF_ENABLED = "per_app_thermal_enabled"
     const val PREF_PREFIX = "per_app_thermal_pkg_"
     const val PREF_BASE_PROFILE = "per_app_base_profile"
+    const val PREF_OVERRIDE_ACTIVE = "per_app_override_active"
 
     private fun prefs(context: Context): SharedPreferences =
         PreferenceManager.getDefaultSharedPreferences(context)
@@ -59,5 +60,12 @@ object PerAppProfileStore {
 
     fun setBaseProfile(context: Context, profile: Int) {
         prefs(context).edit().putString(PREF_BASE_PROFILE, profile.toString()).apply()
+    }
+
+    fun isOverrideActive(context: Context): Boolean =
+        prefs(context).getBoolean(PREF_OVERRIDE_ACTIVE, false)
+
+    fun setOverrideActive(context: Context, active: Boolean) {
+        prefs(context).edit().putBoolean(PREF_OVERRIDE_ACTIVE, active).apply()
     }
 }
